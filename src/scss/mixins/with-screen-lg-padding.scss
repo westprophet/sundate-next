@@ -1,0 +1,42 @@
+@mixin with-screen-padding-xs($r: true, $l: true){
+  @if $l {
+    padding-left: $screen-padding-xs;
+  }
+  @if $r {
+    padding-right: $screen-padding-xs;
+  }
+}
+
+@mixin with-screen-padding-sm($r: true, $l: true){
+  @if $l {
+    padding-left: $screen-padding-sm;
+  }
+  @if $r {
+    padding-right: $screen-padding-sm;
+  }
+}
+
+//Контейнеры
+@mixin with-screen-padding-lg($r: true, $l: true){
+  @if $l {
+    padding-left: $screen-padding-lg;
+  }
+  @if $r {
+    padding-right: $screen-padding-lg;
+  }
+}
+
+
+
+@mixin with-screen-padding($r: true, $l: true){
+  @include with-screen-padding-xs($r,$l);
+  @include for-sm{
+    @include with-screen-padding-sm($r,$l);
+  }
+  @include for-lg{
+    @include with-screen-padding-lg($r,$l);
+  }
+}
+
+
+
