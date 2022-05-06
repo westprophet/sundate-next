@@ -1,3 +1,4 @@
 import HelloSection from './HelloSection';
+import React from 'react';
 
-export default HelloSection;
+export default React.memo(HelloSection);

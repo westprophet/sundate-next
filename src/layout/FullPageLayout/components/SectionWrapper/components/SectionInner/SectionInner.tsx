@@ -12,7 +12,7 @@ export default function SectionInner({
 }: ISectionInnerProps) {
   return (
     <div className={cn(s.SectionInner, 'with-screen-padding', className)}>
-      <div className={cn(s.inner)}>{children}</div>
+      {children}
     </div>
   );
 }

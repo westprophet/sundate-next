@@ -1,6 +1,11 @@
-import { fullpageApi } from '@fullpage/react-fullpage';
+import { fullpageApi, Item } from '@fullpage/react-fullpage';
 
 export default interface IFullPageContextValue {
-  fullpageApi: fullpageApi | null;
+  api: fullpageApi | null;
   state: any;
+  current: {
+    origin: Item;
+    destination: Item;
+    direction: string;
+  } | null;
 }

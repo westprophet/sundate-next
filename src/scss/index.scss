@@ -1,5 +1,7 @@
 @import "theme";
 @import "others";
+@import "fonts";
+@import "full-page-overwrite";
 :root {
   @include DefaultTheme();
 }
@@ -7,7 +9,9 @@ html{
   color: white;
   font-family: Roboto, sans-serif;
 }
-
+figure{
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;

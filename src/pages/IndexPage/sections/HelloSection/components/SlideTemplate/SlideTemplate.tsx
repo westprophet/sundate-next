@@ -7,6 +7,7 @@ import s from './SlideTemplate.module.scss';
 import cn from 'classnames';
 import { Section } from '../../../../../../layout/FullPageLayout';
 import Image, { StaticImageData } from 'next/image';
+import Panel from './components/Panel';
 
 export default function SlideTemplate({
   className,
@@ -21,10 +22,11 @@ export default function SlideTemplate({
           src={cover}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
           loading={isFirstSlide ? 'eager' : 'lazy'}
         />
       </div>
-      <div className={cn(s.panel)}></div>
+      <Panel />
       <Section.Inner className={cn(s.inner)}>{children}</Section.Inner>
     </Section.Slide>
   );

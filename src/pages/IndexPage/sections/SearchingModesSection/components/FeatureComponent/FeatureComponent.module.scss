@@ -1,0 +1,59 @@
+.FeatureComponent {
+  max-width: 260px;
+  display: grid;
+  grid-template-rows: 64px auto;
+  justify-items: center;
+  gap: 10px;
+  @include for-lg {
+    gap: 15px;
+    grid-template-rows: 80px auto;
+  }
+  @include for-xxxl{
+    gap: 30px;
+  }
+
+  .icon {
+    box-shadow: 0px 2px 12px rgba(45, 17, 95, 0.6);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    @include for-lg{
+      width: 80px;
+      height: 80px;
+    }
+
+    &.yellow {
+      background-color: $yellow-color;
+    }
+
+    &.purple {
+      background-color: $purple-color;
+    }
+
+    &.red {
+      background-color: $red-color;
+    }
+
+    &.aqua {
+      background-color: $primary-color;
+    }
+
+    &.green {
+      background-color: $green-color;
+    }
+
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+    @include f9() {
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+    }
+    @include for-lg {
+      @include f6();
+    }
+  }
+}

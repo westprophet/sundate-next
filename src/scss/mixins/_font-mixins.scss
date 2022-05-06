@@ -1,72 +1,44 @@
-//10
-@mixin f8{
-  font-size: 10px;
-  font-style: normal;
-  line-height: 120%;
-  @content;
-}
-
-//12
-@mixin f7{
+@mixin f9{
   font-size: 12px;
-  font-style: normal;
-  line-height: 120%;
-  //line-height: 14px;
+  line-height: 14px;
   @content;
 }
 
-//14
-@mixin f5{
+@mixin f8{
   font-size: 14px;
-  font-style: normal;
-  line-height: 120%;
-  //line-height: 18px;
   @content;
 }
 
-//16
-@mixin f5_16{
-  font-size: 16px;
-  font-style: normal;
-  line-height: 120%;
-  //line-height: 20px;
-  @content;
-}
-
-/***
- 18
-**/
-@mixin f4{
+@mixin f7{
   font-size: 18px;
-  line-height: 120%;
-  //line-height: 22px;
   @content;
 }
 
-//24
-@mixin f3{
+@mixin f6{
+  font-size: 20px;
+  @content;
+}
+
+@mixin f5{
   font-size: 24px;
-  line-height: 120%;
-  //line-height: 29px;
   @content;
 }
 
-
-//30
-@mixin f3{
-  //font-weight: 700;
+@mixin f4{
   font-size: 30px;
-  line-height: 120%;
   @content;
 }
-//48
+
+@mixin f3{
+  font-size: 36px;
+  @content;
+}
+
 @mixin f2{
-  //line-height: 120%;
   font-size: 48px;
   @content;
 }
 
-//64
 @mixin f1{
   font-size: 64px;
   @content;

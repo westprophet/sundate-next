@@ -2,10 +2,16 @@
  * Created by westprophet on 05.05.2022
  */
 
-import React, { createContext } from 'react';
+import React, {
+  createContext,
+  useState,
+  startTransition,
+  useEffect,
+  useRef,
+} from 'react';
 import s from './FullPageLayout.module.scss';
 import cn from 'classnames';
-import ReactFullpage from '@fullpage/react-fullpage';
+import ReactFullpage, { fullpageApi, Item } from '@fullpage/react-fullpage';
 import { INITIAL_VALUE } from './constants';
 import IFullPageContextValue from './types/IFullPageContextValue';
 
@@ -17,30 +23,55 @@ export const FullPageContext =
 export default function FullPageLayout({
   className,
   children,
+  anchors,
 }: IFullPageLayoutProps) {
+  const [current, setState] = useState<{
+    origin: Item;
+    destination: Item;
+    direction: string;
+  } | null>(null);
+  const fapi = useRef<fullpageApi | null>(null);
+  const fstate = useRef<any>(null);
+  console.log(fapi, fstate, current);
   return (
-    <main className={cn(s.FullPageLayout, className)}>
-      <Header />
-      <ReactFullpage
-        licenseKey={'YOUR_KEY_HERE'}
-        scrollingSpeed={700} /* Options here */
-        render={({ state, fullpageApi }) => {
-          return (
-            <FullPageContext.Provider value={{ state, fullpageApi }}>
-              <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>
-            </FullPageContext.Provider>
-          );
-        }}
-      />
-    </main>
+    <FullPageContext.Provider
+      value={{ state: fstate.current, current, api: fapi.current }}
+    >
+      <main id="FullPageLayout" className={cn(s.FullPageLayout, className)}>
+        <Header />
+        <ReactFullpage
+          licenseKey={'YOUR_KEY_HERE'}
+          scrollingSpeed={700}
+          controlArrows={false}
+          navigation
+          navigationPosition={'left'}
+          slidesNavigation
+          slidesNavPosition="bottom"
+          showActiveTooltip
+          onLeave={(origin: Item, destination: Item, direction: string) => {
+            startTransition(() => setState({ origin, destination, direction }));
+          }}
+          navigationTooltips={['01', '02', '03', '04', '05', '06', '07']}
+          // waterEffect
+          anchors={anchors}
+          render={({ state, fullpageApi }) => {
+            fapi.current = fullpageApi;
+            fstate.current = state;
+            return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
+          }}
+        />
+      </main>
+    </FullPageContext.Provider>
   );
 }
 
 FullPageLayout.defaultProps = {
   className: '',
+  anchors: [],
 };
 
 interface IFullPageLayoutProps {
   className?: string;
   children: any;
+  anchors: string[];
 }

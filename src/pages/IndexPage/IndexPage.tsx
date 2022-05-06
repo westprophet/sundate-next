@@ -11,10 +11,24 @@ import SearchingModesSection from './sections/SearchingModesSection';
 
 export default function IndexPage({ className }: IIndexPageProps) {
   return (
-    <FullPageLayout className={cn(s.IndexPage, className)}>
+    <FullPageLayout
+      className={cn(s.IndexPage, className)}
+      anchors={[
+        'NoDateNoFate',
+        'FiveSearchingModes',
+        'SimpleAndQuick',
+        'OurAdvantages',
+        'NewsAndEvents',
+        'SunDateFamily',
+        'Contacts',
+      ]}
+    >
       <HelloSection />
       <SearchingModesSection />
       <HelloSection />
+      <SearchingModesSection />
+      <HelloSection />
+      <SearchingModesSection />
     </FullPageLayout>
   );
 }

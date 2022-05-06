@@ -1,3 +1,4 @@
-import IndexPage from './IndexPage'
+import IndexPage from './IndexPage';
+import React from 'react';
 
-export default IndexPage;
+export default React.memo(IndexPage);

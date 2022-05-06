@@ -1,0 +1,110 @@
+//.fp-slidesNav, #fp-nav{
+//  transition: .7s;
+//  transition-delay: 1s;
+//  opacity: 1;
+//}
+#fp-nav {
+  max-width: 30px;
+  left: auto!important;
+  right: 0!important;
+  @include for-xl{
+    max-width: 40px;
+    left: 10px!important;
+  }
+  @include for-xxxl{
+    left: 70px!important;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //gap: 15px;
+    height: 260px;
+    position: relative;
+    //background-color: red !important;
+
+    $active-height-xs: 75px;
+    $active-height-xl: 150px;
+
+    li {
+      height: auto !important;
+      width: 6px !important;
+
+      div.fp-tooltip {
+        transition: .3s;
+        height: 100% !important;
+        line-height: $active-height-xs !important;
+        font-weight: 400 !important;
+        font-size: 24px !important;
+        @include before-xxl {
+          display: none !important;
+        }
+        @include for-xl {
+          line-height: $active-height-xl !important;
+        }
+      }
+
+      a {
+        position: static !important;
+
+        span {
+          display: block;
+
+          &:last-child {
+            margin: 0 !important;
+            transition: .7s;
+            border-radius: 10px !important;
+            position: static !important;
+            background-color: white !important;
+            width: 6px !important;
+            height: 6px !important;
+          }
+        }
+
+        &.active {
+          transition: .7s;
+
+          span {
+            &:last-child {
+              transition: .7s;
+              box-shadow: 0px 0px 3px 2px #ffffffcc;
+              height: $active-height-xs !important;
+              @include for-xl {
+                height: $active-height-xl !important;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover{
+        a span:last-child{
+          box-shadow: 0px 0px 3px 2px #ffffffcc;
+          transition: .2s;
+        }
+      }
+    }
+  }
+}
+.fp-slidesNav ul, .fp-slidesNav ul {
+  display: flex;
+  justify-content: center;
+  span{
+    background: white!important;
+    opacity: 0.5;
+    transition: .25s;
+    &:last-child{
+      height: 8px;
+      width: 8px;
+      margin: -4px 0 0 -4px;
+    }
+  }
+  a.active{
+    span{
+      background: white!important;
+      opacity: 1;
+      box-shadow: 0px 0px 3px 2px #ffffffcc;
+      transition: .2s;
+    }
+  }
+}

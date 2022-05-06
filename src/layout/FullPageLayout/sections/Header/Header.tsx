@@ -8,14 +8,15 @@ import cn from 'classnames';
 import Logo from './components/Logo';
 import DesktopMenu from './components/DesktopMenu';
 import { MenuButton } from 'components/BurgerButton/BurgerButton';
+import { HEADER_MENU } from '../../constants';
 
-export default function Header({ className }: IHeaderProps) {
+export default function Header({ className, id }: IHeaderProps) {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   return (
-    <header className={cn(s.Header, 'with-screen-padding', className)}>
+    <header id={id} className={cn(s.Header, 'with-screen-padding', className)}>
       <Logo />
       <div className={cn(s.menuContainer)}>
-        <DesktopMenu className={cn(s.desktop)} />
+        <DesktopMenu menu={HEADER_MENU} className={cn(s.desktop)} />
         <MenuButton
           isOpen={openMobileMenu}
           onClick={() => {
@@ -30,8 +31,12 @@ export default function Header({ className }: IHeaderProps) {
 
 Header.defaultProps = {
   className: '',
+  id: 'header-menu',
+  // menu: HEADER_MENU,
 };
 
 interface IHeaderProps {
   className?: string;
+  id?: string;
+  // menu?: IMenu;
 }

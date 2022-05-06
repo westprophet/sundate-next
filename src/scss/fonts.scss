@@ -1,1 +1,20 @@
 @import "../assets/fonts/Geometria/stylesheet.css";
+
+h1{
+  @include f6();
+  @include for-md{
+    @include f1();
+  }
+}
+h2{
+  @include f6();
+  @include for-md{
+    @include f2();
+  }
+}
+h3{
+  @include f6();
+  @include for-md{
+    @include f3();
+  }
+}
