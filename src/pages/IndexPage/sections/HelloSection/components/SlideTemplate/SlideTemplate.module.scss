@@ -1,0 +1,29 @@
+.SlideTemplate {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  .inner{
+    max-width: 526px;
+  }
+
+  .bg{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .panel{
+    clip-path: polygon(0 0, 30% 0, 75% 100%, 0% 100%);
+    background-color: var(--primary-color-transparent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    width: 85%;
+  }
+}

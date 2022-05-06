@@ -1,2 +1,3 @@
-import SectionWrapper from './SectionWrapper';
-export { SectionWrapper };
+import Section from './SectionWrapper';
+// import Slide from './SlideWrapper';
+export { Section };

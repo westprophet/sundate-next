@@ -1,0 +1,55 @@
+@mixin _with-screen-padding($r: true, $l: true, $p: 0, $property: padding) {
+  @if $l {
+    #{$property}-left: $p;
+  }
+  @if $r {
+    #{$property}-right: $p;
+  }
+}
+
+@mixin with-screen-padding-xs($r: true, $l: true, $property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-xs, $property)
+}
+
+@mixin with-screen-padding-sm($r: true, $l: true,$property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-sm, $property)
+}
+
+@mixin with-screen-padding-lg($r: true, $l: true,$property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-lg, $property)
+}
+
+@mixin with-screen-padding-xl($r: true, $l: true,$property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-xl, $property)
+}
+
+@mixin with-screen-padding-xxl($r: true, $l: true,$property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-xxl, $property)
+}
+
+@mixin with-screen-padding-xxxl($r: true, $l: true,$property: padding) {
+  @include _with-screen-padding($r, $l, $screen-padding-xxxl, $property)
+}
+
+
+@mixin with-screen-padding($r: true, $l: true,  $property: padding) {
+  @include with-screen-padding-xs($r, $l, $property);
+  @include for-sm {
+    @include with-screen-padding-sm($r, $l, $property);
+  }
+  @include for-lg {
+    @include with-screen-padding-lg($r, $l, $property);
+  }
+  @include for-xl {
+    @include with-screen-padding-xl($r, $l, $property);
+  }
+  @include for-xxl {
+    @include with-screen-padding-xxl($r, $l, $property);
+  }
+  @include for-xxxl {
+    @include with-screen-padding-xxxl($r, $l, $property);
+  }
+}
+
+
+

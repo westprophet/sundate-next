@@ -1,8 +1,8 @@
-import FullPageLayout, { FullPageContext } from './FullPageLayout';
+import FullPageLayout, { FullPageContext as Context } from './FullPageLayout';
 import IFullPageContextValue from './types/IFullPageContextValue';
-import { SectionWrapper } from './components/';
+import { Section } from './components/';
 
-export { FullPageContext, SectionWrapper };
+export { Context, Section };
 export type { IFullPageContextValue };
 
 export default FullPageLayout;

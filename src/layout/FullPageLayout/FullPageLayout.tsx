@@ -19,7 +19,7 @@ export default function FullPageLayout({
   children,
 }: IFullPageLayoutProps) {
   return (
-    <main className={cn(s.IndexPage, className)}>
+    <main className={cn(s.FullPageLayout, className)}>
       <Header />
       <ReactFullpage
         licenseKey={'YOUR_KEY_HERE'}

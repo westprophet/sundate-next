@@ -1,0 +1,27 @@
+.Logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  img {
+    height: 100%;
+    max-width: 86px;
+    max-height: 86px;
+  }
+
+  span {
+    font-weight: 700;
+    font-family: Geometria, Roboto, sans-serif;
+    @include f7();
+    @include for-md {
+      @include f5();
+    }
+    @include for-xl{
+      @include f3();
+    }
+    @include for-xxxl{
+        @include f2();
+    }
+  }
+}

@@ -1,3 +1,5 @@
-import SectionWrapper from './SectionWrapper'
+import Wrapper from './SectionWrapper';
+import Inner from './components/SectionInner';
+import Slide from './components/SlideWrapper';
 
-export default SectionWrapper;
+export default { Wrapper, Inner, Slide };

@@ -1,0 +1,7 @@
+@import "src/scss/colors";
+
+//Главная тема
+@mixin DefaultTheme {
+  --primary-color: #{$primary-color};
+  --primary-color-transparent: #{$primary-color-transparent};
+}

@@ -7,7 +7,9 @@ export default function SectionWrapper({
   className,
 }: ISectionWrapperProps) {
   return (
-    <section className={cn(s.SectionWrapper, 'section')}>{children}</section>
+    <section className={cn(s.SectionWrapper, 'section', className)}>
+      {children}
+    </section>
   );
 }
 

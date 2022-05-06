@@ -1,0 +1,12 @@
+.BurgerButton {
+  height: 16px;
+  width: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  @include for-md{
+    height: 25px;
+    stroke-width: 3;
+    width: 30px;
+  }
+}

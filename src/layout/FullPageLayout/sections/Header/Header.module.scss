@@ -1,3 +1,32 @@
+@import "../../scss/data";
 .Header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $header-height-xs;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFFFFF70;
+  @include for-md{
+    height: $header-height-md;
+  }
+  @include for-lg{
+    height: $header-height-lg;
+  }
+  .menuContainer{
+    .desktop{
+      @include before-lg{
+        display: none;
+      }
+    }
+    .mobile{
+      @include for-lg{
+        display: none;
+      }
+    }
+  }
 
 }
