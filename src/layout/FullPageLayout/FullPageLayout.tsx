@@ -8,6 +8,7 @@ import React, {
   startTransition,
   useEffect,
   useRef,
+  useCallback,
 } from 'react';
 import s from './FullPageLayout.module.scss';
 import cn from 'classnames';
@@ -34,7 +35,16 @@ export default function FullPageLayout({
     direction: string;
   } | null>(null);
   const [theme, setTheme] = useState<TFullPageTheme>(INITIAL_VALUE.theme.value);
+  const _setTheme = useCallback((t: TFullPageTheme) => {
+    if (!t) return;
+    setTheme((p: TFullPageTheme) => {
+      document.body.classList.remove(p);
+      document.body.classList.add(t);
 
+      // document.body.classList.replace(p, t);
+      return t;
+    });
+  }, []);
   const fapi = useRef<fullpageApi | null>(null);
   const fstate = useRef<any>(null);
 
@@ -44,7 +54,7 @@ export default function FullPageLayout({
         state: fstate.current,
         current,
         api: fapi.current,
-        theme: { value: theme, setTheme },
+        theme: { value: theme, setTheme: _setTheme },
       }}
     >
       <main id="FullPageLayout" className={cn(s.FullPageLayout, {}, className)}>
