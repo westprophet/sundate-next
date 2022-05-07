@@ -12,7 +12,7 @@ export default function SectionWrapper({
   return (
     <section className={cn(s.SectionWrapper, 'section', className)}>
       {cover ? (
-        <div className={cn(s.bg)}>
+        <div className={cn(s.bg, 'background')}>
           <Image
             src={cover}
             layout="fill"

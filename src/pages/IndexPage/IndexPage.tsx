@@ -10,6 +10,9 @@ import HelloSection from './sections/HelloSection';
 import SearchingModesSection from './sections/SearchingModesSection';
 import SimpleAndQuickSection from './sections/SimpleAndQuickSection';
 import OurAdvantages from './sections/OurAdvantages';
+import NewsSection from './sections/NewsSection';
+import IfYouWantSection from './sections/IfYouWantSection';
+import FooterSection from './sections/FooterSection';
 
 export default function IndexPage({ className }: IIndexPageProps) {
   return (
@@ -29,6 +32,9 @@ export default function IndexPage({ className }: IIndexPageProps) {
       <SearchingModesSection />
       <SimpleAndQuickSection />
       <OurAdvantages />
+      <NewsSection />
+      <IfYouWantSection />
+      <FooterSection />
       {/*<HelloSection />*/}
       {/*<SearchingModesSection />*/}
       {/*<HelloSection />*/}

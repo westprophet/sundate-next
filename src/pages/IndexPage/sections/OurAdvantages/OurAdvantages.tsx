@@ -14,11 +14,12 @@ import ad1 from './images/scales.svg';
 import ad2 from './images/approved.svg';
 import ad3 from './images/hard.svg';
 import ad4 from './images/bank.svg';
+import CustomButton from 'components/CustomButton';
 
 export default function OurAdvantages({ className }: IOurAdvantagesProps) {
   return (
     <Section.Wrapper className={cn(s.OurAdvantages, className)} cover={bg}>
-      <Section.Inner>
+      <Section.Inner className={cn(s.inner)}>
         <h2>Our advantages</h2>
         <p className={cn(s.desc)}>
           We made a lot of simple innovations for online dating. Because we
@@ -29,6 +30,7 @@ export default function OurAdvantages({ className }: IOurAdvantagesProps) {
           Entertaining and Socially oriented. From people who know what means
           loneliness, to people who know what it is too.
         </p>
+        <CustomButton>details</CustomButton>
         <div className={cn(s.advatages)}>
           <Advantage Icon={ad1} title="equal chance">
             Simple way for people with any disabilities or major illness to make

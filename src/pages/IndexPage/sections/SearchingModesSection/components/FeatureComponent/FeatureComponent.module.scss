@@ -1,9 +1,12 @@
 .FeatureComponent {
-  max-width: 220px;
+  max-width: 150px;
   display: grid;
   grid-template-rows: 64px auto;
   justify-items: center;
   gap: 10px;
+  @include for-md{
+    max-width: 220px;
+  }
   @include for-lg{
     gap: 15px;
   }
