@@ -1,0 +1,24 @@
+.Social {
+  display: grid;
+
+  max-width: max-content;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+
+  svg{
+    height: 24px;
+    @include for-md{
+      height: 45px;
+    }
+  }
+  span{
+    margin-top: 12px;
+    @include f10();
+    font-weight: 400;
+    @include for-md{
+      @include f8();
+    }
+  }
+}

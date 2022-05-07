@@ -1,0 +1,66 @@
+.IfYouWantSection {
+  .inner {
+    text-align: center;
+
+    h2 {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      @include f10() {
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      @include for-sm {
+        @include f8();
+      }
+      @include for-md {
+        @include f6();
+      }
+    }
+
+    .socials {
+      //height: 35px;
+      width: 100%;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      @include for-sm {
+        margin: 55px auto 30px auto;
+      }
+    }
+
+    .credits {
+      @include f10() {
+        font-weight: 400;
+        letter-spacing: 0.05em;
+      }
+      @include for-sm {
+        @include f8();
+      }
+      @include for-md {
+        @include f6();
+      }
+    }
+
+    .beginning {
+      margin-top: 25px;
+      @include for-sm {
+        @include f8();
+      }
+      @include for-md {
+        @include f6();
+      }
+    }
+
+  }
+
+  :global(.background) {
+    img {
+      filter: brightness(70%);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.NewsSection {
+  *{
+    color: #252525!important;
+  }
+  h2{
+    text-align: center;
+    font-weight: 300;
+    @include f4();
+  }
+}

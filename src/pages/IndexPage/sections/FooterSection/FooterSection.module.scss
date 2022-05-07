@@ -1,0 +1,25 @@
+.FooterSection {
+  .copyright {
+    width: 100%;
+    background-color: #454545;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include f10();
+    @include for-md{
+      @include f7();
+      height: 66px;
+    }
+  }
+
+  :global(.background) {
+    img {
+      filter: brightness(60%);
+    }
+  }
+}
