@@ -8,6 +8,8 @@ import cn from 'classnames';
 import FullPageLayout from '../../layout/FullPageLayout';
 import HelloSection from './sections/HelloSection';
 import SearchingModesSection from './sections/SearchingModesSection';
+import SimpleAndQuickSection from './sections/SimpleAndQuickSection';
+import OurAdvantages from './sections/OurAdvantages';
 
 export default function IndexPage({ className }: IIndexPageProps) {
   return (
@@ -25,10 +27,12 @@ export default function IndexPage({ className }: IIndexPageProps) {
     >
       <HelloSection />
       <SearchingModesSection />
-      <HelloSection />
-      <SearchingModesSection />
-      <HelloSection />
-      <SearchingModesSection />
+      <SimpleAndQuickSection />
+      <OurAdvantages />
+      {/*<HelloSection />*/}
+      {/*<SearchingModesSection />*/}
+      {/*<HelloSection />*/}
+      {/*<SearchingModesSection />*/}
     </FullPageLayout>
   );
 }

@@ -1,6 +1,9 @@
+@mixin f10{
+  font-size: 10px;
+  @content;
+}
 @mixin f9{
   font-size: 12px;
-  line-height: 14px;
   @content;
 }
 

@@ -18,6 +18,7 @@ export default function SearchingModesSection({
       cover={BG}
     >
       <Section.Inner>
+        <h2>Five Searching Modes</h2>
         <div className={cn(s.featuredContainer)}>
           <FeatureComponent color="red">
             You want to find locals, so take this one – Local Mode

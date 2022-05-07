@@ -1,0 +1,39 @@
+.SimpleAndQuickSection {
+  h2{
+    margin-bottom: 15px;
+  }
+
+  ol{
+    margin-bottom: 15px;
+    li{
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      @include f9();
+      @include for-lg{
+        @include f5();
+      }
+      @include for-xxxl{
+        @include f3();
+      }
+    }
+    @include for-lg{
+      margin-bottom: 85px;
+    }
+  }
+  .inner{
+    span{
+      display: block;
+      @include for-xl{
+        margin-bottom: 25px;
+      }
+    }
+    div, span{
+      font-weight: 700;
+      @include f9();
+      @include for-lg{
+        @include f5();
+      }
+    }
+  }
+}

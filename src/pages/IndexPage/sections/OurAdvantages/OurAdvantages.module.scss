@@ -1,0 +1,41 @@
+.OurAdvantages {
+  display: grid;
+  @include for-xxxl {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h2 {
+    @include for-xxxl {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  p.desc {
+    font-weight: 400;
+    @include f9();
+    @include for-lg {
+      @include f6();
+    }
+    @include for-xxxl {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  .advatages {
+    margin: 30px auto 0 auto;
+    padding: 0 2px;
+    display: grid;
+    grid-gap: 10px;
+    max-width: max-content;
+    //align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    @include for-md {
+      grid-gap: 18px;
+    }
+  }
+}

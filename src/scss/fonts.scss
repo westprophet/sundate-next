@@ -2,12 +2,14 @@
 
 h1{
   @include f6();
+  text-transform: uppercase;
   @include for-md{
     @include f1();
   }
 }
 h2{
   @include f6();
+  text-transform: uppercase;
   @include for-md{
     @include f2();
   }

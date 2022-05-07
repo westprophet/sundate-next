@@ -1,5 +1,8 @@
 .SearchingModesSection {
   width: 100%;
+  h2{
+    text-align: center;
+  }
 
   .featuredContainer {
     gap: 30px 10px;
@@ -7,7 +10,10 @@
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
-    @include for-xxl{
+    @include for-lg{
+      margin-bottom: 20vh;
+    }
+    @include for-xxxl{
       margin-bottom: 30vh;
     }
   }
