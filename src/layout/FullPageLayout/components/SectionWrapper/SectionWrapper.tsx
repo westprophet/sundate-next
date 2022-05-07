@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import s from './SectionWrapper.module.scss';
 import cn from 'classnames';
 import Image, { StaticImageData } from 'next/image';
+import { FullPageContext } from '../../FullPageLayout';
+import { TFullPageTheme } from '../../types/TFullPageTheme';
 
 export default function SectionWrapper({
   children,
   className,
   cover,
-  isFirstSlide,
+  anchor,
+  theme,
 }: ISectionWrapperProps) {
+  const fp = useContext(FullPageContext);
+  const oldTheme = fp.theme.value;
+  const oldThemeRef = useRef<TFullPageTheme>(oldTheme);
+
+  useEffect(() => {
+    if (!theme) return;
+    if (fp.current?.destination.anchor === anchor) {
+      fp.theme.setTheme(theme);
+    } else if (fp.current?.origin.anchor === anchor) {
+      fp.theme.setTheme(oldThemeRef.current);
+    }
+  }, [anchor, fp, fp.current?.destination]);
+
   return (
     <section className={cn(s.SectionWrapper, 'section', className)}>
       {cover ? (
@@ -19,7 +35,7 @@ export default function SectionWrapper({
             objectFit="cover"
             placeholder="blur"
             quality={100}
-            loading={isFirstSlide ? 'eager' : 'lazy'}
+            loading="eager"
           />
         </div>
       ) : null}
@@ -37,6 +53,7 @@ SectionWrapper.defaultProps = {
 interface ISectionWrapperProps {
   children?: any;
   className?: string;
-  isFirstSlide?: boolean;
+  anchor: string;
+  theme?: TFullPageTheme;
   cover?: StaticImageData;
 }

@@ -4,6 +4,10 @@
   stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;
+  color: inherit;
+  * {
+    color: inherit;
+  }
   @include for-md{
     height: 25px;
     stroke-width: 3;

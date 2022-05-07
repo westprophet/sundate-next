@@ -15,6 +15,7 @@ export default function SimpleAndQuickSection({
     <Section.Wrapper
       className={cn(s.SimpleAndQuickSection, className)}
       cover={BG}
+      anchor="SimpleAndQuick"
     >
       <Section.Inner className={cn(s.inner)}>
         <h2>

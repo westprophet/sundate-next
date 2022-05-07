@@ -18,7 +18,11 @@ import CustomButton from 'components/CustomButton';
 
 export default function OurAdvantages({ className }: IOurAdvantagesProps) {
   return (
-    <Section.Wrapper className={cn(s.OurAdvantages, className)} cover={bg}>
+    <Section.Wrapper
+      className={cn(s.OurAdvantages, className)}
+      cover={bg}
+      anchor="OurAdvantages"
+    >
       <Section.Inner className={cn(s.inner)}>
         <h2>Our advantages</h2>
         <p className={cn(s.desc)}>

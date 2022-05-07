@@ -2,4 +2,8 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
+  color: inherit;
+  span{
+    color: inherit;
+  }
 }

@@ -9,7 +9,11 @@ import { Section } from '../../../../layout/FullPageLayout';
 
 export default function NewsSection({ className }: INewsSectionProps) {
   return (
-    <Section.Wrapper className={cn(s.NewsSection, className)}>
+    <Section.Wrapper
+      className={cn(s.NewsSection, className)}
+      anchor="NewsAndEvents"
+      theme="dark"
+    >
       <Section.Inner>
         <h2>news and events</h2>
       </Section.Inner>

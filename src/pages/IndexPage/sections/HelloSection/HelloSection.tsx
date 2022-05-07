@@ -18,7 +18,10 @@ import { FullPageContext } from '../../../../layout/FullPageLayout/FullPageLayou
 export default function HelloSection({ className }: IHelloSectionProps) {
   const { state } = useContext(FullPageContext);
   return (
-    <Section.Wrapper className={cn(s.HelloSection, className)}>
+    <Section.Wrapper
+      className={cn(s.HelloSection, className)}
+      anchor="NoDateNoFate"
+    >
       <Slide.Wrapper cover={Hello} isFirstSlide>
         <Slide.Title>
           No Date

@@ -4,6 +4,7 @@
   align-items: center;
   gap: 3px;
   cursor: pointer;
+  color: inherit;
   img {
     height: 100%;
     max-width: 86px;
@@ -13,6 +14,7 @@
   span {
     font-weight: 700;
     font-family: Geometria, Roboto, sans-serif;
+    color: inherit;
     @include f7();
     @include for-md {
       @include f5();

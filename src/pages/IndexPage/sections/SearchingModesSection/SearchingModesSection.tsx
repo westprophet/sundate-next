@@ -16,6 +16,7 @@ export default function SearchingModesSection({
       isFirstSlide
       className={cn(s.SearchingModesSection, className)}
       cover={BG}
+      anchor="FiveSearchingModes"
     >
       <Section.Inner>
         <h2>Five Searching Modes</h2>

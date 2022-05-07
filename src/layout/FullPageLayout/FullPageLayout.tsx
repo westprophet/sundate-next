@@ -15,7 +15,10 @@ import ReactFullpage, { fullpageApi, Item } from '@fullpage/react-fullpage';
 import { INITIAL_VALUE } from './constants';
 import IFullPageContextValue from './types/IFullPageContextValue';
 
+import variable from 'src/scss/_export.module.scss';
+
 import Header from './sections/Header';
+import { TFullPageTheme } from './types/TFullPageTheme';
 
 export const FullPageContext =
   createContext<IFullPageContextValue>(INITIAL_VALUE);
@@ -30,18 +33,25 @@ export default function FullPageLayout({
     destination: Item;
     direction: string;
   } | null>(null);
+  const [theme, setTheme] = useState<TFullPageTheme>(INITIAL_VALUE.theme.value);
+
   const fapi = useRef<fullpageApi | null>(null);
   const fstate = useRef<any>(null);
-  console.log(fapi, fstate, current);
+
   return (
     <FullPageContext.Provider
-      value={{ state: fstate.current, current, api: fapi.current }}
+      value={{
+        state: fstate.current,
+        current,
+        api: fapi.current,
+        theme: { value: theme, setTheme },
+      }}
     >
-      <main id="FullPageLayout" className={cn(s.FullPageLayout, className)}>
+      <main id="FullPageLayout" className={cn(s.FullPageLayout, {}, className)}>
         <Header />
         <ReactFullpage
           licenseKey={'YOUR_KEY_HERE'}
-          scrollingSpeed={700}
+          scrollingSpeed={Number(variable.pageTransition)}
           controlArrows={false}
           navigation
           navigationPosition={'left'}
@@ -52,7 +62,7 @@ export default function FullPageLayout({
             startTransition(() => setState({ origin, destination, direction }));
           }}
           navigationTooltips={['01', '02', '03', '04', '05', '06', '07']}
-          // waterEffect
+          waterEffect
           anchors={anchors}
           render={({ state, fullpageApi }) => {
             fapi.current = fullpageApi;

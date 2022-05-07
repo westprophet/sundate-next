@@ -10,7 +10,11 @@ import BG from './images/footer-min.webp';
 
 export default function FooterSection({ className }: IFooterSectionProps) {
   return (
-    <Section.Wrapper className={cn(s.FooterSection, className)} cover={BG}>
+    <Section.Wrapper
+      className={cn(s.FooterSection, className)}
+      cover={BG}
+      anchor="Contacts"
+    >
       <Section.Inner>
         <h2>Lorem ipsum</h2>
       </Section.Inner>

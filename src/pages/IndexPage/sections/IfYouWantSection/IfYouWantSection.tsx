@@ -17,7 +17,11 @@ export default function IfYouWantSection({
   className,
 }: IIfYouWantSectionProps) {
   return (
-    <Section.Wrapper className={cn(s.IfYouWantSection, className)} cover={BG}>
+    <Section.Wrapper
+      className={cn(s.IfYouWantSection, className)}
+      cover={BG}
+      anchor="SunDateFamily"
+    >
       <Section.Inner>
         <div className={cn(s.inner)}>
           <h2>
