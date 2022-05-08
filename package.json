@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@fullpage/react-fullpage": "^0.1.23",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/lab": "^5.0.0-alpha.80",
+    "@mui/material": "^5.6.4",
     "classnames": "^2.3.1",
+    "formik": "^2.2.9",
     "framer-motion": "^6.3.3",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "react-media": "^2.0.0-rc.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",

@@ -6,28 +6,24 @@ import React from 'react';
 import s from './CustomButton.module.scss';
 import cn from 'classnames';
 
-import Arrow from './Arrow.svg';
+import { Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-export default function CustomButton({
-  className,
-  children,
-  arrow,
-}: ICustomButtonProps) {
+export default function CustomButton(p: ICustomButtonProps) {
   return (
-    <button className={cn(s.CustomButton, className)}>
-      <span>{children}</span>
-      {arrow && <Arrow />}
-    </button>
+    <Button
+      className={cn(s.CustomButton, p.className)}
+      endIcon={<ArrowForwardIcon />}
+    >
+      details
+    </Button>
   );
 }
 
 CustomButton.defaultProps = {
   className: '',
-  arrow: true,
 };
 
 interface ICustomButtonProps {
   className?: string;
-  children: any;
-  arrow: boolean;
 }

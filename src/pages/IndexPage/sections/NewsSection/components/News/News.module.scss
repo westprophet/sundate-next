@@ -1,3 +1,36 @@
 .News {
+  width: 100%;
+  color: currentColor;
+  .cover {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
+  @include for-lg {
+    max-width: 540px;
+  }
+  @include for-xxl {
+    max-width: 470px;
+  }
+
+  h3 {
+    font-weight: 300;
+    margin: 0;
+  }
+
+  p.description {
+    @include f9() {
+      font-weight: 400;
+    }
+    @include for-md {
+      @include f6() {
+        font-weight: 500;
+      }
+    }
+    @include for-xxl {
+
+    }
+  }
 }

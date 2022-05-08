@@ -10,6 +10,7 @@ export default function FeatureComponent({
   className,
   color,
   children,
+  Icon,
 }: IFeatureComponentProps) {
   return (
     <div className={cn(s.FeatureComponent, className)}>
@@ -21,7 +22,9 @@ export default function FeatureComponent({
           [s.green]: color === 'green',
           [s.red]: color === 'red',
         })}
-      />
+      >
+        <Icon />
+      </div>
       <p>{children}</p>
     </div>
   );
@@ -34,5 +37,6 @@ FeatureComponent.defaultProps = {
 interface IFeatureComponentProps {
   className?: string;
   children: any;
+  Icon: any;
   color: 'yellow' | 'purple' | 'aqua' | 'green' | 'red';
 }

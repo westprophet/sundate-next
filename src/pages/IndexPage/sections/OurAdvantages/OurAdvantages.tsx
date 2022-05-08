@@ -15,6 +15,8 @@ import ad2 from './images/approved.svg';
 import ad3 from './images/hard.svg';
 import ad4 from './images/bank.svg';
 import CustomButton from 'components/CustomButton';
+import { Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function OurAdvantages({ className }: IOurAdvantagesProps) {
   return (
@@ -34,7 +36,7 @@ export default function OurAdvantages({ className }: IOurAdvantagesProps) {
           Entertaining and Socially oriented. From people who know what means
           loneliness, to people who know what it is too.
         </p>
-        <CustomButton>details</CustomButton>
+        <CustomButton />
         <div className={cn(s.advatages)}>
           <Advantage Icon={ad1} title="equal chance">
             Simple way for people with any disabilities or major illness to make

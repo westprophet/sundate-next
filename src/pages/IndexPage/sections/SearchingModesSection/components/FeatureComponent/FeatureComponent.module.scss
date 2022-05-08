@@ -23,6 +23,9 @@
     border-radius: 50%;
     width: 64px;
     height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include for-xxxl{
       width: 80px;
       height: 80px;

@@ -2,7 +2,7 @@
  * Created by westprophet on 05.05.2022
  */
 
-import React, { useContext } from 'react';
+import React from 'react';
 import s from './HelloSection.module.scss';
 import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
@@ -13,10 +13,8 @@ import img3 from './images/3-min.webp';
 import img4 from './images/4-min.webp';
 import img5 from './images/5-min.webp';
 import img6 from './images/6-min.webp';
-import { FullPageContext } from '../../../../layout/FullPageLayout/FullPageLayout';
 
 export default function HelloSection({ className }: IHelloSectionProps) {
-  const { state } = useContext(FullPageContext);
   return (
     <Section.Wrapper
       className={cn(s.HelloSection, className)}
@@ -31,7 +29,10 @@ export default function HelloSection({ className }: IHelloSectionProps) {
         <Slide.Description>
           Winter is coming… and You will be able to upload SunDate And make your
           Fate with the Most Efficient and Thrilling matchmaking App of modern
-          Times. Let the SunDate be with You
+          Times.
+          <br />
+          <p>Let the SunDate be with You</p>
+          <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img2}>
@@ -44,6 +45,7 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           Our mission is to make people Un-lonely in their Lives, Real lives in
           real World. The fastest way from online to offline meetings. Come to
           the Real side
+          <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img3}>
@@ -55,6 +57,7 @@ export default function HelloSection({ className }: IHelloSectionProps) {
         <Slide.Description>
           Only real Video without any Filters or fake Masks. Only real People
           around the Whole world and further to the stars
+          <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img4}>
@@ -66,6 +69,7 @@ export default function HelloSection({ className }: IHelloSectionProps) {
         <Slide.Description>
           Only real Video without any Filters or fake Masks. Only real People
           around the Whole world and further to the stars
+          <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img5}>
@@ -79,6 +83,7 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           otherwise, you go for date but for another one, but definitely, you go
           for date. Respect yourself, respect your Time, respect each other and
           People will respect us too. Time is Priceless thing in this World.
+          <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img6}>

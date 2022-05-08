@@ -13,6 +13,7 @@ export default function SlideTemplate({
   className,
   children,
   cover,
+
   isFirstSlide,
 }: ISlideTemplateProps) {
   return (
@@ -40,5 +41,6 @@ interface ISlideTemplateProps {
   className?: string;
   isFirstSlide?: boolean;
   children: any;
+  // link: string;
   cover: StaticImageData;
 }

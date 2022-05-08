@@ -1,29 +1,4 @@
 .CustomButton {
-  border: none;
-  border-bottom: 1px solid currentColor;
-  display: flex;
-  padding: 10px 20px;
-  background: none;
-  position: relative;
-  align-items: center;
-  gap: 10px;
-  width: max-content;
-  height: max-content;
-  cursor: pointer;
-  @include for-lg{
-    padding: 20px 30px;
-  }
-  span{
-    text-transform: uppercase;
-    color: currentColor;
-    @include f10(){
-      font-weight: 700;
-    }
-    @include for-md{
-        @include f5();
-    }
-  }
-  svg{
-    height:  10px;
-  }
+  max-width: max-content;
+  height: min-content;
 }

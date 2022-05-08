@@ -1,4 +1,16 @@
 .SimpleAndQuickSection {
+  position: relative;
+  //background: linear-gradient(180deg, #A1F9FD 0%, #01CADC 100%);
+  //.hand{
+  //  position: absolute;
+  //  width: 50%;
+  //  right: 0;
+  //  height: 100%;
+  //  bottom: 0;
+  //  & > span{
+  //
+  //  }
+  //}
   h2{
     margin-bottom: 15px;
   }
@@ -22,13 +34,16 @@
     }
   }
   .inner{
-    span{
+    .LinkButton{
+      margin-top: 3vh;
+    }
+    & > span{
       display: block;
       @include for-xl{
         margin-bottom: 25px;
       }
     }
-    div, span{
+    & > div, & > span{
       font-weight: 700;
       @include f9();
       @include for-lg{

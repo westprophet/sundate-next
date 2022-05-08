@@ -31,7 +31,10 @@
         grid-row: 2/3;
       }
     }
-
+    .LinkButton{
+      max-width: max-content;
+      height: min-content;
+    }
     .advatages {
       margin: 30px auto 0 auto;
       padding: 0 2px;
