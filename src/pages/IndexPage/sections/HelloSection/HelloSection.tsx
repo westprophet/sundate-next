@@ -16,10 +16,7 @@ import img6 from './images/6-min.webp';
 
 export default function HelloSection({ className }: IHelloSectionProps) {
   return (
-    <Section.Wrapper
-      className={cn(s.HelloSection, className)}
-      anchor="NoDateNoFate"
-    >
+    <Section.Wrapper className={cn(s.HelloSection, className)} anchor="NoDateNoFate">
       <Slide.Wrapper cover={Hello} isFirstSlide>
         <Slide.Title>
           No Date
@@ -27,9 +24,8 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           No Fate
         </Slide.Title>
         <Slide.Description>
-          Winter is coming… and You will be able to upload SunDate And make your
-          Fate with the Most Efficient and Thrilling matchmaking App of modern
-          Times.
+          Winter is coming… and You will be able to upload SunDate And make your Fate with the Most
+          Efficient and Thrilling matchmaking App of modern Times.
           <br />
           <p>Let the SunDate be with You</p>
           <Slide.Button title="details" />
@@ -42,9 +38,8 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           More than App
         </Slide.Title>
         <Slide.Description>
-          Our mission is to make people Un-lonely in their Lives, Real lives in
-          real World. The fastest way from online to offline meetings. Come to
-          the Real side
+          Our mission is to make people Un-lonely in their Lives, Real lives in real World. The
+          fastest way from online to offline meetings. Come to the Real side
           <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
@@ -55,8 +50,8 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           Real People
         </Slide.Title>
         <Slide.Description>
-          Only real Video without any Filters or fake Masks. Only real People
-          around the Whole world and further to the stars
+          Only real Video without any Filters or fake Masks. Only real People around the Whole world
+          and further to the stars
           <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
@@ -67,8 +62,8 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           Mega Fun
         </Slide.Title>
         <Slide.Description>
-          Only real Video without any Filters or fake Masks. Only real People
-          around the Whole world and further to the stars
+          Only real Video without any Filters or fake Masks. Only real People around the Whole world
+          and further to the stars
           <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
@@ -79,10 +74,10 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           Life wisest
         </Slide.Title>
         <Slide.Description>
-          Limited time to organize your date. 48 hours and you go for date,
-          otherwise, you go for date but for another one, but definitely, you go
-          for date. Respect yourself, respect your Time, respect each other and
-          People will respect us too. Time is Priceless thing in this World.
+          Limited time to organize your date. 48 hours and you go for date, otherwise, you go for
+          date but for another one, but definitely, you go for date. Respect yourself, respect your
+          Time, respect each other and People will respect us too. Time is Priceless thing in this
+          World.
           <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>
@@ -93,12 +88,11 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           By Alex (CEO of SD)
         </Slide.Title>
         <Slide.Description>
-          “Some say - metauniverse, but I say - Your universe, Our universe,
-          Real universe. Anything virtual cannot replace your life, cannot
-          replace people around you, cannot replace real warm and support of
-          beloved person, cannot replace You. We can hide behind the masks and
-          smiles, but we cannot hide from ourselves and from our loneliness. The
-          best thing we have, it is this one life and it’s ours.”
+          “Some say - metauniverse, but I say - Your universe, Our universe, Real universe. Anything
+          virtual cannot replace your life, cannot replace people around you, cannot replace real
+          warm and support of beloved person, cannot replace You. We can hide behind the masks and
+          smiles, but we cannot hide from ourselves and from our loneliness. The best thing we have,
+          it is this one life and it’s ours.”
         </Slide.Description>
       </Slide.Wrapper>
     </Section.Wrapper>

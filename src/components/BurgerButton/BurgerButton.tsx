@@ -95,5 +95,5 @@ interface Props extends SVGMotionProps<any> {
   className?: string;
   onClick?(): any;
 }
-
+export default MenuButton;
 export { MenuButton };

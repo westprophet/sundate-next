@@ -11,6 +11,7 @@ module.exports = {
   plugins: ['react-hooks', 'prettier'],
   parser: '@typescript-eslint/parser',
   rules: {
+    'react/no-unescaped-entities': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
