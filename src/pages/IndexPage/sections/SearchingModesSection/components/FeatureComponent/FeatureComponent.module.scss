@@ -3,8 +3,9 @@
   display: grid;
   grid-template-rows: 64px auto;
   justify-items: center;
-  gap: 10px;
+  gap: 5px;
   @include for-md{
+    gap: 10px;
     max-width: 220px;
   }
   @include for-lg{
@@ -15,17 +16,19 @@
     max-width: 260px;
     gap: 30px;
   }
-  //@include for-xxxl{
-  //}
 
   .icon {
     box-shadow: 0px 2px 12px rgba(45, 17, 95, 0.6);
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include for-lg{
+      width: 64px;
+      height: 64px;
+    }
     @include for-xxxl{
       width: 80px;
       height: 80px;

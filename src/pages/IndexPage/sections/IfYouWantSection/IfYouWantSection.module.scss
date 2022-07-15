@@ -16,7 +16,10 @@
       @include for-sm {
         @include f8();
       }
-      @include for-md {
+      @include for-lg{
+        @include f7();
+      }
+      @include for-xxl {
         @include f6();
       }
     }

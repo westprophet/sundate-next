@@ -9,7 +9,7 @@ import cn from 'classnames';
 export default function Logo({ className }: ILogoProps) {
   return (
     <div className={cn(s.Logo, className)}>
-      <img src="/logotype.svg" alt="SunDate" />
+      <img src="/logo-min.svg" alt="SunDate" />
       <span>SunDate</span>
     </div>
   );

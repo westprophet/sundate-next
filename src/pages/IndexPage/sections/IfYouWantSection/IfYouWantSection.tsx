@@ -13,9 +13,7 @@ import Twitter from 'assets/Twitter.svg';
 import Facebook from 'assets/Facebook.svg';
 import Inst from 'assets/Inst.svg';
 
-export default function IfYouWantSection({
-  className,
-}: IIfYouWantSectionProps) {
+export default function IfYouWantSection({ className }: IIfYouWantSectionProps) {
   return (
     <Section.Wrapper
       className={cn(s.IfYouWantSection, className)}
@@ -24,24 +22,11 @@ export default function IfYouWantSection({
     >
       <Section.Inner>
         <div className={cn(s.inner)}>
-          <h2>
-            If You want to be a part of <br /> SunDate family
-          </h2>
-          <span className={cn(s.subtitle)}>
-            And to get the VIP account as a first user, just subscribe us before
-            launch and share us in social media! Wright us in direct if You have
-            any comments and proposals
-          </span>
+          <h2>Beсome a part of SunDate family</h2>
           <div className={cn(s.socials)}>
             <Social Icon={Twitter} title="@sundate_app" />
             <Social Icon={Facebook} title="@sundateiscoming" />
             <Social Icon={Inst} title="@sundate_app" />
-          </div>
-          <span className={cn(s.credits)}>
-            Alex CEO of SunDate will reply You personally
-          </span>
-          <div className={cn(s.beginning)}>
-            <b>It’s just a beginning… ;)</b>
           </div>
         </div>
       </Section.Inner>

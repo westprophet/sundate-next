@@ -13,13 +13,13 @@
     height: 150px;
   }
   @include for-md {
-    grid-template-rows: 40px auto;
+    grid-template-rows: 30px auto;
     width: 265px;
     height: 190px;
     grid-gap: 7px;
     padding: 15px;
   }
-  @include for-lg {
+  @include for-xxl {
     width: 345px;
     height: 245px;
     grid-template-rows: 60px auto;
@@ -34,11 +34,11 @@
     margin: 0;
     letter-spacing: 0em;
     font-size: 11px;
+    height: min-content;
     @include for-md {
-      height: 40px;
-      @include f6();
+      @include f8();
     }
-    @include for-lg {
+    @include for-xxl {
       @include f5();
     }
   }
@@ -48,10 +48,9 @@
     @include for-md {
       grid-gap: 7px;
       grid-template-columns: 4fr 9fr;
-      @include for-lg {
-        grid-gap: 13px;
-
-      }
+    }
+    @include for-xxl {
+      grid-gap: 13px;
     }
 
     .icon {
@@ -64,7 +63,6 @@
       @include for-md {
         display: block;
       }
-      //height: 30px;
     }
 
     p {
@@ -74,9 +72,9 @@
       @include f10();
       @include for-md {
         letter-spacing: 0.02em;
-        @include f8();
+        @include f9();
       }
-      @include for-lg {
+      @include for-xxl {
         letter-spacing: 0em;
         @include f7();
       }
@@ -86,10 +84,10 @@
   &:hover {
     transition: .25s;
     background: $primary-color-transparent;
-    transform: scale(1.2);
+    transform: scale(1.1);
     z-index: 10;
-    @include for-lg {
-      transform: scale(1.1);
-    }
+    //@include for-xxl {
+    //  transform: scale(1.1);
+    //}
   }
 }

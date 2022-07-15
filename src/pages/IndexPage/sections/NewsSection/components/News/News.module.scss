@@ -3,9 +3,12 @@
   color: currentColor;
   .cover {
     position: relative;
-    height: 250px;
+    height: 150px;
     width: 100%;
     margin-bottom: 30px;
+    @include for-xxl{
+      height: 250px;
+    }
   }
 
   @include for-lg {
@@ -19,12 +22,17 @@
     font-weight: 300;
     margin: 0;
   }
+  .title{
+    @include f5;
+    @include for-xl{
 
+    }
+  }
   p.description {
     @include f9() {
       font-weight: 400;
     }
-    @include for-md {
+    @include for-xxl {
       @include f6() {
         font-weight: 500;
       }

@@ -14,46 +14,29 @@ import ad1 from './images/scales.svg';
 import ad2 from './images/approved.svg';
 import ad3 from './images/hard.svg';
 import ad4 from './images/bank.svg';
-import CustomButton from 'components/CustomButton';
-import { Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function OurAdvantages({ className }: IOurAdvantagesProps) {
   return (
-    <Section.Wrapper
-      className={cn(s.OurAdvantages, className)}
-      cover={bg}
-      anchor="OurAdvantages"
-    >
+    <Section.Wrapper className={cn(s.OurAdvantages, className)} cover={bg} anchor="OurAdvantages">
       <Section.Inner className={cn(s.inner)}>
         <h2>Our advantages</h2>
-        <p className={cn(s.desc)}>
-          We made a lot of simple innovations for online dating. Because we
-          communicated with people, we observed and noticed, we made and we will
-          make. Every function of our product is a life necessity, every
-          instrument is a life situation, every our step had main purpose to
-          make SunDate more Usability, more Efficiency, more Timesaving, more
-          Entertaining and Socially oriented. From people who know what means
-          loneliness, to people who know what it is too.
-        </p>
-        <CustomButton />
+        {/*<CustomButton />*/}
         <div className={cn(s.advatages)}>
           <Advantage Icon={ad1} title="equal chance">
-            Simple way for people with any disabilities or major illness to make
-            a Goal and to make a giant leap from loneliness. "That's one small
-            step for That's one small
+            Simple way for people with any disabilities or major illness to make a Goal and to make
+            a giant leap from loneliness. "That's one small step for That's one small
           </Advantage>
           <Advantage Icon={ad2} title="Only real video content and people">
-            Only real video content to make matchmaking more interesting and to
-            avoid fakes. Higher ratings for...
+            Only real video content to make matchmaking more interesting and to avoid fakes. Higher
+            ratings for...
           </Advantage>
           <Advantage Icon={ad3} title="Original interface for more Usability">
-            Dynamic menu and all buttons in big finger zone. Auto play for
-            additional comfort. With auto play, your...
+            Dynamic menu and all buttons in big finger zone. Auto play for additional comfort. With
+            auto play, your...
           </Advantage>
           <Advantage Icon={ad4} title="Dating without borders ">
-            All searching modes opened forever and for everyone. Additional
-            services and many other unexpected...
+            All searching modes opened forever and for everyone. Additional services and many other
+            unexpected...
           </Advantage>
         </div>
       </Section.Inner>

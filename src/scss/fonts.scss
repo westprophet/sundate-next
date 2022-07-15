@@ -1,28 +1,33 @@
 @import "../assets/fonts/Geometria/stylesheet.css";
 
-h1{
+h1 {
   text-transform: uppercase;
-  @include f6();
-  @include for-sm{
-    @include f4();
+  @include f4();
+  @include for-xl{
+    @include f3();
   }
-  @include for-md{
+  @include for-xxl {
     @include f1();
   }
 }
-h2{
+
+h2 {
   text-transform: uppercase;
-  @include f6();
-  @include for-sm{
-    @include f4();
+  @include f4();
+  @include for-xl{
+    @include f3();
   }
-  @include for-md{
+  @include for-xxl {
     @include f1();
   }
 }
-h3{
+
+h3 {
   @include f6();
-  @include for-lg{
+  @include for-xl{
+    @include f4();
+  }
+  @include for-xxl {
     @include f3();
   }
 }

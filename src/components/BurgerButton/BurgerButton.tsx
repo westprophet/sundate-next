@@ -4,13 +4,7 @@ import { motion, SVGMotionProps } from 'framer-motion';
 import s from './BurgerButton.module.scss';
 import cn from 'classnames';
 
-const MenuButton = ({
-  isOpen = false,
-  width = 24,
-  height = 24,
-  className,
-  onClick,
-}: Props) => {
+const MenuButton = ({ isOpen = false, width = 24, height = 24, className, onClick }: Props) => {
   const variant = isOpen ? 'opened' : 'closed';
   const top = {
     closed: {
@@ -41,8 +35,6 @@ const MenuButton = ({
     },
   };
   const lineProps = {
-    // stroke: '#000',
-    // strokeWidth: 2,
     vectorEffect: 'non-scaling-stroke',
     initial: 'closed',
     animate: variant,
@@ -59,30 +51,9 @@ const MenuButton = ({
       overflow="visible"
       preserveAspectRatio="none"
     >
-      <motion.line
-        x1="0"
-        x2={unitWidth}
-        y1="0"
-        y2="0"
-        variants={top}
-        {...lineProps}
-      />
-      <motion.line
-        x1="0"
-        x2={unitWidth}
-        y1="2"
-        y2="2"
-        variants={center}
-        {...lineProps}
-      />
-      <motion.line
-        x1="0"
-        x2={unitWidth}
-        y1="4"
-        y2="4"
-        variants={bottom}
-        {...lineProps}
-      />
+      <motion.line x1="0" x2={unitWidth} y1="0" y2="0" variants={top} {...lineProps} />
+      <motion.line x1="0" x2={unitWidth} y1="2" y2="2" variants={center} {...lineProps} />
+      <motion.line x1="0" x2={unitWidth} y1="4" y2="4" variants={bottom} {...lineProps} />
     </motion.svg>
   );
 };

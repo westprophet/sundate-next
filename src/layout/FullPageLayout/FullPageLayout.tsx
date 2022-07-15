@@ -2,14 +2,7 @@
  * Created by westprophet on 05.05.2022
  */
 
-import React, {
-  createContext,
-  useState,
-  startTransition,
-  useEffect,
-  useRef,
-  useCallback,
-} from 'react';
+import React, { createContext, useState, startTransition, useRef, useCallback } from 'react';
 import s from './FullPageLayout.module.scss';
 import cn from 'classnames';
 import ReactFullpage, { fullpageApi, Item } from '@fullpage/react-fullpage';
@@ -21,14 +14,9 @@ import variable from 'src/scss/_export.module.scss';
 import Header from './sections/Header';
 import { TFullPageTheme } from './types/TFullPageTheme';
 
-export const FullPageContext =
-  createContext<IFullPageContextValue>(INITIAL_VALUE);
+export const FullPageContext = createContext<IFullPageContextValue>(INITIAL_VALUE);
 
-export default function FullPageLayout({
-  className,
-  children,
-  anchors,
-}: IFullPageLayoutProps) {
+export default function FullPageLayout({ className, children, anchors }: IFullPageLayoutProps) {
   const [current, setState] = useState<{
     origin: Item;
     destination: Item;

@@ -24,10 +24,10 @@ export default function HelloSection({ className }: IHelloSectionProps) {
           No Fate
         </Slide.Title>
         <Slide.Description>
-          Winter is coming… and You will be able to upload SunDate And make your Fate with the Most
-          Efficient and Thrilling matchmaking App of modern Times.
-          <br />
-          <p>Let the SunDate be with You</p>
+          {/*Winter is coming… and You will be able to upload SunDate And make your Fate with the Most*/}
+          {/*Efficient and Thrilling matchmaking App of modern Times.*/}
+          {/*<br />*/}
+          {/*<p>Let the SunDate be with You</p>*/}
           <Slide.Button title="details" />
         </Slide.Description>
       </Slide.Wrapper>

@@ -5,13 +5,18 @@
   }
 
   .featuredContainer {
-    gap: 30px 10px;
     display: flex;
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
+    grid-gap: 10px;
+    gap: 6px;
     @include for-lg{
+      gap: 12px 6px;
       margin-bottom: 20vh;
+    }
+    @include for-xxl{
+      gap: 30px 10px;
     }
     @include for-xxxl{
       margin-bottom: 30vh;
