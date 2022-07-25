@@ -1,0 +1,28 @@
+@import "../../../../../../scss/data";
+.SidebarMenu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--primary-color);
+  right: 0;
+  top: 0;
+  padding-top: $header-height-xs;
+  @include for-md{
+    padding-top: $header-height-md;
+  }
+  @include for-lg{
+    padding-top: $header-height-lg;
+  }
+  .menu{
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    a{
+      font-weight: 500;
+      @include f8();
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
