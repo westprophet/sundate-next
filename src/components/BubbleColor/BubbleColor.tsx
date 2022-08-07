@@ -34,7 +34,7 @@ export default function BubbleColor({ className, variant, reverse, cy, cx, r, co
   return (
     <motion.circle
       variants={variants}
-      whileInView={variant}
+      animate={variant}
       viewport={{
         amount: 1,
       }}

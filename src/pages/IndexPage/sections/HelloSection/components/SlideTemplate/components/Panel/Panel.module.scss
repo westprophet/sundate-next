@@ -6,9 +6,8 @@
   top: 0;
   height: 100%;
   z-index: -2;
-
   overflow: hidden;
-  width: 130%;
+  width: 100%;
   @include for-sm {
     width: 100%;
   }

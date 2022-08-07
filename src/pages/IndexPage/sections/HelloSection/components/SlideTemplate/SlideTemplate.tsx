@@ -39,7 +39,7 @@ export const SlideTemplate = ({
       whileInView="show"
       viewport={{
         once: true,
-        amount: 1,
+        amount: 0.8,
       }}
     >
       <div className={cn(s.bg)}>
