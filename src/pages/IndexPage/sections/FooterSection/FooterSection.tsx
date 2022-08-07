@@ -24,32 +24,25 @@ const SignupSchema = Yup.object().shape({
 
 export default function FooterSection({ className }: IFooterSectionProps) {
   return (
-    <Section.Wrapper
-      className={cn(s.FooterSection, className)}
-      cover={BG}
-      anchor="Contacts"
-    >
+    <Section.Wrapper className={cn(s.FooterSection, className)} cover={BG} anchor="Contacts">
       <Section.Inner className={cn(s.head)}>
-        <h2>Lorem ipsum</h2>
+        <h2>Subscribe us</h2>
       </Section.Inner>
       <Section.Inner className={cn(s.inner)}>
         <nav className={cn(s.menu)}>
-          <a href="#">
-            <span>Cookie</span>
-          </a>
-          <a href="#">
+          <a href="/#Contacts">
             <span>Contacts</span>
           </a>
-          <a href="#">
+          <a href="/#NewsAndEvents">
             <span>News</span>
           </a>
-          <a href="#">
+          <a href="/#SunDateFamily">
             <span>Support</span>
           </a>
-          <a href="#">
+          <a href="/#OurAdvantages">
             <span>For Investors</span>
           </a>
-          <a href="#">
+          <a href="/#NoDateNoFate">
             <span>About us</span>
           </a>
         </nav>
@@ -102,9 +95,19 @@ export default function FooterSection({ className }: IFooterSectionProps) {
         </Formik>
       </Section.Inner>
       <div className={cn(s.socials, 'with-screen-padding')}>
-        <Facebook />
-        <Inst />
-        <Twitter />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.facebook.com/sundateiscoming/"
+        >
+          <Facebook />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sundate_app/">
+          <Inst />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/sundate_app">
+          <Twitter />
+        </a>
       </div>
       <div className={cn(s.copyright)}>
         <span>Copyright © {new Date().getFullYear()} Sundate inc .</span>

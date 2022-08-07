@@ -45,7 +45,7 @@ export default function NewsSection({ className }: INewsSectionProps) {
               initial="hidden"
               viewport={{
                 once: true,
-                amount: 1,
+                amount: 0.8,
               }}
             >
               <h2>news and events</h2>

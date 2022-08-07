@@ -7,12 +7,14 @@ import s from './Social.module.scss';
 import cn from 'classnames';
 
 export const Social = forwardRef(
-  ({ className, Icon, title }: ISocialProps, ref: LegacyRef<HTMLDivElement> | undefined) => {
+  ({ className, Icon, title, href }: ISocialProps, ref: LegacyRef<HTMLDivElement> | undefined) => {
     return (
-      <div ref={ref} className={cn(s.Social, className)}>
-        <Icon />
-        <span>{title}</span>
-      </div>
+      <a target="_blank" rel="noopener noreferrer" href={href}>
+        <div ref={ref} className={cn(s.Social, className)}>
+          <Icon />
+          <span>{title}</span>
+        </div>
+      </a>
     );
   }
 );
@@ -26,5 +28,6 @@ interface ISocialProps {
   className?: string;
   Icon: any;
   title: string;
+  href: string;
 }
 export default Social;

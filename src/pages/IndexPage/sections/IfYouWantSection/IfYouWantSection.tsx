@@ -56,14 +56,27 @@ export default function IfYouWantSection({ className }: IIfYouWantSectionProps) 
             Beсome a part of SunDate family
           </motion.h2>
           <div className={cn(s.socials)}>
-            <Social variants={showVertVariants} custom="top" Icon={Twitter} title="@sundate_app" />
             <Social
+              variants={showVertVariants}
+              custom="top"
+              Icon={Twitter}
+              href="https://twitter.com/sundate_app"
+              title="@sundate_app"
+            />
+            <Social
+              href="https://www.facebook.com/sundateiscoming/"
               variants={showVertVariants}
               custom="top"
               Icon={Facebook}
               title="@sundateiscoming"
             />
-            <Social variants={showVertVariants} custom="top" Icon={Inst} title="@sundate_app" />
+            <Social
+              variants={showVertVariants}
+              custom="top"
+              Icon={Inst}
+              title="@sundate_app"
+              href="https://www.instagram.com/sundate_app/"
+            />
           </div>
         </div>
       </Section.Inner>

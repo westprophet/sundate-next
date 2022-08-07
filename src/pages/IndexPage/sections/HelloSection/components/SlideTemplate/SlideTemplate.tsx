@@ -48,6 +48,9 @@ export const SlideTemplate = ({
           layout="fill"
           objectFit="cover"
           placeholder="blur"
+          height="100%"
+          width="100%"
+          quality="100"
           loading={isFirstSlide ? 'eager' : 'lazy'}
         />
       </div>
