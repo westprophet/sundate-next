@@ -9,15 +9,39 @@ import { Section } from '../../../../../../layout/FullPageLayout';
 import Image, { StaticImageData } from 'next/image';
 import Panel from './components/Panel';
 
-export default function SlideTemplate({
+const variants = {
+  show: {
+    transition: {
+      delay: 0,
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    // transition: {
+    //   delay: 1,
+    //   delayChildren: 1,
+    //   staggerChildren: 1,
+    // },
+  },
+};
+
+export const SlideTemplate = ({
   className,
   children,
   cover,
-
   isFirstSlide,
-}: ISlideTemplateProps) {
+}: ISlideTemplateProps) => {
   return (
-    <Section.Slide className={cn(s.SlideTemplate, className)}>
+    <Section.MSlide
+      className={cn(s.SlideTemplate, className)}
+      initial="hidden"
+      variants={variants}
+      whileInView="show"
+      viewport={{
+        once: true,
+        amount: 1,
+      }}
+    >
       <div className={cn(s.bg)}>
         <Image
           src={cover}
@@ -29,9 +53,11 @@ export default function SlideTemplate({
       </div>
       <Panel />
       <Section.Inner className={cn(s.inner)}>{children}</Section.Inner>
-    </Section.Slide>
+    </Section.MSlide>
   );
-}
+};
+
+SlideTemplate.displayName = 'SlideTemplate';
 
 SlideTemplate.defaultProps = {
   className: '',
@@ -44,3 +70,5 @@ interface ISlideTemplateProps {
   // link: string;
   cover: StaticImageData;
 }
+
+export default SlideTemplate;

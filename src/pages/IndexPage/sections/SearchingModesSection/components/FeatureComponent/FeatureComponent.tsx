@@ -5,7 +5,18 @@
 import React from 'react';
 import s from './FeatureComponent.module.scss';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 
+const variants = {
+  show: {
+    y: 0,
+    opacity: 1,
+  },
+  hidden: {
+    y: '100%',
+    opacity: 0,
+  },
+};
 export default function FeatureComponent({
   className,
   color,
@@ -13,7 +24,7 @@ export default function FeatureComponent({
   Icon,
 }: IFeatureComponentProps) {
   return (
-    <div className={cn(s.FeatureComponent, className)}>
+    <motion.div className={cn(s.FeatureComponent, className)} variants={variants}>
       <div
         className={cn(s.icon, {
           [s.yellow]: color === 'yellow',
@@ -26,7 +37,7 @@ export default function FeatureComponent({
         <Icon />
       </div>
       <p>{children}</p>
-    </div>
+    </motion.div>
   );
 }
 

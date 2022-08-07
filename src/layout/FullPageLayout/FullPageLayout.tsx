@@ -28,8 +28,6 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
     setTheme((p: TFullPageTheme) => {
       document.body.classList.remove(p);
       document.body.classList.add(t);
-
-      // document.body.classList.replace(p, t);
       return t;
     });
   }, []);

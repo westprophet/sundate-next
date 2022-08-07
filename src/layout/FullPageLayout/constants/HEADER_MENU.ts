@@ -1,29 +1,24 @@
-import { IMenu, IMenuItem } from '../../../interfaces/IMenu';
+import { IMenu } from '../../../interfaces/IMenu';
 
 export const HEADER_MENU: IMenu = [
   {
-    // anchor: 'NoDateNoFate',
     title: 'About us',
-    href: '/',
+    href: '/#NoDateNoFate/',
   },
   {
-    // anchor: 'NoDateNoFate',
     title: 'Support',
-    href: '/',
+    href: '/#SunDateFamily',
   },
   {
-    // anchor: 'NoDateNoFate',
     title: 'For Investors',
-    href: '/',
+    href: '/#OurAdvantages',
   },
   {
-    // anchor: 'NoDateNoFate',
     title: 'News',
-    href: '/',
+    href: '/#NewsAndEvents',
   },
   {
-    // anchor: 'NoDateNoFate',
     title: 'Contacts',
-    href: '/',
+    href: '/#Contacts',
   },
 ];

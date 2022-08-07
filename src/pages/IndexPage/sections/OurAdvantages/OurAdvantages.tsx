@@ -14,12 +14,45 @@ import ad1 from './images/scales.svg';
 import ad2 from './images/approved.svg';
 import ad3 from './images/hard.svg';
 import ad4 from './images/bank.svg';
+import { motion } from 'framer-motion';
+
+const variants = {
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+  hidden: {},
+};
+
+const showVertVariants = {
+  show: (custom: 'top' | 'bottom') => ({
+    y: 0,
+    opacity: 1,
+  }),
+  hidden: (custom: 'top' | 'bottom') => ({
+    y: custom === 'bottom' ? '-100%' : '100%',
+    opacity: 0,
+  }),
+};
 
 export default function OurAdvantages({ className }: IOurAdvantagesProps) {
   return (
     <Section.Wrapper className={cn(s.OurAdvantages, className)} cover={bg} anchor="OurAdvantages">
-      <Section.Inner className={cn(s.inner)}>
-        <h2>Our advantages</h2>
+      <Section.Inner
+        className={cn(s.inner)}
+        variants={variants}
+        whileInView="show"
+        initial="hidden"
+        // viewport={{
+        //   once: true,
+        //   amount: 1,
+        // }}
+      >
+        <motion.h2 variants={showVertVariants} custom="top">
+          Our advantages
+        </motion.h2>
         {/*<CustomButton />*/}
         <div className={cn(s.advatages)}>
           <Advantage Icon={ad1} title="equal chance">

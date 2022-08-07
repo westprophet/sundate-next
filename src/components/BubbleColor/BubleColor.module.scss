@@ -1,0 +1,14 @@
+.BubbleColor {
+  &.yellow{
+    fill: var(--yellow-light-color);
+  }
+  &.green{
+    fill: var(--green-light-color);
+  }
+  &.pink{
+    fill: var(--pink-color);
+  }
+  &.purple{
+    fill: var(--purple-light-color);
+  }
+}

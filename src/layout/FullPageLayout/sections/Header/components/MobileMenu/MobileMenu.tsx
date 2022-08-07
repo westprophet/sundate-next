@@ -21,6 +21,7 @@ export default function MobileMenu({ className }: IMobileMenuProps) {
         className={cn(s.MobileMenu, className)}
         animate={isOpen ? 'open' : 'closed'}
         initial="closed"
+        suppressHydrationWarning={false}
       >
         {!b.lg && (
           <>
@@ -28,7 +29,7 @@ export default function MobileMenu({ className }: IMobileMenuProps) {
               <BurgerButtonIcon />
             </IconButton>
             <ClientOnlyPortal selector="#__next">
-              <SidebarMenu />
+              <SidebarMenu toggleOpen={toggleOpen} />
             </ClientOnlyPortal>
           </>
         )}

@@ -4,4 +4,14 @@
 @mixin DefaultTheme {
   --primary-color: #{$primary-color};
   --primary-color-transparent: #{$primary-color-transparent};
+
+  --yellow-light-color: #{$yellow-light-color};
+  --yellow-color: #{$yellow-color};
+  --green-color: #{$green-color};
+  --green-light-color: #{$green-light-color};
+  --purple-color: #{$purple-color};
+  --purple-light-color: #{$purple-light-color};
+  --red-color: #{$red-color};
+  --pink-color: #{$pink-color};
+
 }

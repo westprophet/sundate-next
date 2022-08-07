@@ -2,10 +2,12 @@
  * Created by westp on 15.07.2022
  */
 
-import React from 'react';
+import React, { useContext } from 'react';
 import s from './SidebarMenu.module.scss';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { FullPageContext } from '../../../../../../FullPageLayout';
 
 const variants = {
   open: () => ({
@@ -54,7 +56,7 @@ const variantsItems = {
   },
 };
 
-export default function SidebarMenu({ className }: ISidebarMenuProps) {
+export default function SidebarMenu({ className, toggleOpen }: ISidebarMenuProps) {
   return (
     <motion.aside
       layoutId="sidebar"
@@ -62,19 +64,19 @@ export default function SidebarMenu({ className }: ISidebarMenuProps) {
       className={cn(s.SidebarMenu, 'with-screen-padding', className)}
     >
       <motion.nav className={cn(s.menu)} variants={variantsMenu}>
-        <motion.a href="#" variants={variantsItems}>
+        <motion.a href="/#NoDateNoFate" variants={variantsItems} onClick={() => toggleOpen()}>
           About us
         </motion.a>
-        <motion.a href="#" variants={variantsItems}>
+        <motion.a href="/#OurAdvantages" variants={variantsItems} onClick={() => toggleOpen()}>
           For Investors
         </motion.a>
-        <motion.a href="#" variants={variantsItems}>
+        <motion.a href="/#SunDateFamily" variants={variantsItems} onClick={() => toggleOpen()}>
           Support
         </motion.a>
-        <motion.a href="#" variants={variantsItems}>
+        <motion.a href="/#NewsAndEvents" variants={variantsItems} onClick={() => toggleOpen()}>
           News
         </motion.a>
-        <motion.a href="#" variants={variantsItems}>
+        <motion.a href="/#Contacts" variants={variantsItems} onClick={() => toggleOpen()}>
           Contacts
         </motion.a>
       </motion.nav>
@@ -88,4 +90,5 @@ SidebarMenu.defaultProps = {
 
 interface ISidebarMenuProps {
   className?: string;
+  toggleOpen(): any;
 }

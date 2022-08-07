@@ -17,6 +17,15 @@ export default function Header({ className, id }: IHeaderProps) {
   return (
     <motion.header
       id={id}
+      animate={{
+        y: 0,
+        transition: {
+          delay: 0.5,
+        },
+      }}
+      initial={{
+        y: '-100%',
+      }}
       className={cn(
         s.Header,
         'with-screen-padding',

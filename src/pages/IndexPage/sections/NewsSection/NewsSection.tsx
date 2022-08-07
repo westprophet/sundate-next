@@ -14,6 +14,17 @@ import sliceIntoChunks from '../../../../utils/sliceIntoChunks';
 import useBreakpoint from '../../../../hooks/useBreakpoint';
 import { Button } from '@mui/material';
 
+const variants = {
+  show: {
+    transition: {
+      delay: 0,
+      staggerChildren: 0.1,
+      delayChildren: 0,
+    },
+  },
+  hidden: {},
+};
+
 export default function NewsSection({ className }: INewsSectionProps) {
   const b = useBreakpoint();
   let size = 1;
@@ -23,15 +34,20 @@ export default function NewsSection({ className }: INewsSectionProps) {
   const chanks = sliceIntoChunks<INews>(TEST_NEWS, size);
 
   return (
-    <Section.Wrapper
-      className={cn(s.NewsSection, className)}
-      anchor="NewsAndEvents"
-      theme="dark"
-    >
+    <Section.Wrapper className={cn(s.NewsSection, className)} anchor="NewsAndEvents" theme="dark">
       {chanks.map((nc: INews[], index: number) => {
         return (
           <Section.Slide key={`slide-news-part-${index}`}>
-            <Section.Inner className={cn(s.inner)}>
+            <Section.Inner
+              className={cn(s.inner)}
+              variants={variants}
+              whileInView="show"
+              initial="hidden"
+              viewport={{
+                once: true,
+                amount: 1,
+              }}
+            >
               <h2>news and events</h2>
               <div className={cn(s.news)}>
                 {nc.map((n: INews, i: number) => {

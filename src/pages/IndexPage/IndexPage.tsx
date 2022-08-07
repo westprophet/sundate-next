@@ -5,7 +5,9 @@
 import React from 'react';
 import s from './IndexPage.module.scss';
 import cn from 'classnames';
+
 import FullPageLayout from '../../layout/FullPageLayout';
+
 import HelloSection from './sections/HelloSection';
 import SearchingModesSection from './sections/SearchingModesSection';
 import SimpleAndQuickSection from './sections/SimpleAndQuickSection';
@@ -35,10 +37,6 @@ export default function IndexPage({ className }: IIndexPageProps) {
       <NewsSection />
       <IfYouWantSection />
       <FooterSection />
-      {/*<HelloSection />*/}
-      {/*<SearchingModesSection />*/}
-      {/*<HelloSection />*/}
-      {/*<SearchingModesSection />*/}
     </FullPageLayout>
   );
 }
