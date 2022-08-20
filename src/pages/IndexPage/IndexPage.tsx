@@ -20,6 +20,7 @@ export default function IndexPage({ className }: IIndexPageProps) {
   return (
     <FullPageLayout
       className={cn(s.IndexPage, className)}
+
       anchors={[
         'NoDateNoFate',
         'FiveSearchingModes',

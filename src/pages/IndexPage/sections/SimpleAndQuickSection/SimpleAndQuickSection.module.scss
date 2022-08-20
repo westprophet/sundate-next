@@ -2,8 +2,14 @@
   position: relative;
   background: linear-gradient(180deg, #A1F9FD 0%, #01CADC 100%);
   padding-top: 40px;
-  overflow: hidden;
+  height: 100%;
   display: flex;
+  overflow: hidden;
+  .sub{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
   @include before-sm {
     justify-content: left !important;
   }
@@ -75,7 +81,6 @@
         height: 100%;
       }
       .phones {
-
         display: flex;
         max-width: 605px;
         position: absolute;

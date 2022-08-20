@@ -53,6 +53,7 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
           navigationPosition={'left'}
           slidesNavigation
           slidesNavPosition="bottom"
+          scrollOverflow={false}
           showActiveTooltip
           onLeave={(origin: Item, destination: Item, direction: string) => {
             startTransition(() => setState({ origin, destination, direction }));
