@@ -1,20 +1,36 @@
 .SearchingModesSection {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 0;
+  @include for-md{
+    padding-top: 5vh!important;
+    justify-content: left!important;
+  }
+  :global(.background){
+    @include before-md{
+      filter: brightness(50%) ;
+    }
+  }
   @include for-lg{
     padding-top: 0;
   }
   h2{
     text-align: center;
+    margin-bottom: 70px;
+    @include before-xs{
+      margin-bottom: 20px;
+    }
   }
 
   .featuredContainer {
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
     grid-gap: 10px;
-    gap: 6px;
+    gap: 20px;
+    @include for-md{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
     @include for-lg{
       gap: 12px 6px;
       margin-bottom: 20vh;

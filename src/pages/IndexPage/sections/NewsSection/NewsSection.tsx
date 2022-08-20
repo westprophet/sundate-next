@@ -13,6 +13,7 @@ import INews from '../../../../interfaces/INews';
 import sliceIntoChunks from '../../../../utils/sliceIntoChunks';
 import useBreakpoint from '../../../../hooks/useBreakpoint';
 import { Button } from '@mui/material';
+import lioha from "*.jpg";
 
 const variants = {
   show: {
@@ -28,8 +29,9 @@ const variants = {
 export default function NewsSection({ className }: INewsSectionProps) {
   const b = useBreakpoint();
   let size = 1;
-  if (b.md) size = 2;
-  if (b.lg) size = 3;
+  if (b.md) size = 1;
+  if (b.lg) size = 2;
+  if (b.xxl) size = 3;
 
   const chanks = sliceIntoChunks<INews>(TEST_NEWS, size);
 
@@ -56,7 +58,7 @@ export default function NewsSection({ className }: INewsSectionProps) {
                       key={`slide-news-part-${index}-${i}`}
                       title={n.title}
                       date={n.date}
-                      cover={CoverForNews}
+                      cover={n.cover}
                     >
                       {n.description}
                     </News>

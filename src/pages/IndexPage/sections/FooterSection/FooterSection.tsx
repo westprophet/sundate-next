@@ -6,7 +6,7 @@ import React from 'react';
 import s from './FooterSection.module.scss';
 import cn from 'classnames';
 import { Section } from 'src/layout/FullPageLayout';
-import BG from './images/footer-min.webp';
+import BG from './images/bg.webp';
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { TextField } from '@mui/material';
@@ -25,29 +25,44 @@ const SignupSchema = Yup.object().shape({
 export default function FooterSection({ className }: IFooterSectionProps) {
   return (
     <Section.Wrapper className={cn(s.FooterSection, className)} cover={BG} anchor="Contacts">
-      <Section.Inner className={cn(s.head)}>
-        <h2>Subscribe us</h2>
-      </Section.Inner>
       <Section.Inner className={cn(s.inner)}>
-        <nav className={cn(s.menu)}>
-          <a href="/#Contacts">
-            <span>Contacts</span>
-          </a>
+        <div className={cn(s.menu)}>
+          <div className={cn(s.head)}>
+            <h2>Subscribe us</h2>
+          </div>
+          {/*<a href="/#Contacts">*/}
+          {/*  <span>Contacts</span>*/}
+          {/*</a>*/}
           <a href="/#NewsAndEvents">
             <span>News</span>
           </a>
           <a href="/#SunDateFamily">
             <span>Support</span>
           </a>
-          <a href="/#OurAdvantages">
+          <a target="_blank" href="/SunDate Inc. Pitch-deck War addition 2022.pdf">
             <span>For Investors</span>
+          </a>
+          <a target="_blank" href="/SunDate Inc. Forecast Financial Statements 2023-2032.pdf">
+            <span>Financial Statements</span>
           </a>
           <a href="/#NoDateNoFate">
             <span>About us</span>
           </a>
-        </nav>
-
-        <Formik
+        </div>
+        <div className={cn(s.email)}>
+          <div className={cn(s.head)}>
+            <h2>Contact us</h2>
+          </div>
+          <a
+            className={cn(s.emailLink)}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:Sundateinc@gmail.com"
+          >
+            Sundateinc@gmail.com
+          </a>
+        </div>
+        {/*        <Formik
           initialValues={{ email: '', message: '' }}
           validationSchema={SignupSchema}
           onSubmit={(values, { setSubmitting }) => {
@@ -92,22 +107,28 @@ export default function FooterSection({ className }: IFooterSectionProps) {
               </LoadingButton>
             </Form>
           )}
-        </Formik>
+        </Formik>*/}
       </Section.Inner>
       <div className={cn(s.socials, 'with-screen-padding')}>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.facebook.com/sundateiscoming/"
-        >
-          <Facebook />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sundate_app/">
-          <Inst />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/sundate_app">
-          <Twitter />
-        </a>
+        <div className={cn(s.items)}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/sundateiscoming/"
+          >
+            <Facebook />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/sundate_app/"
+          >
+            <Inst />
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/sundate_app">
+            <Twitter />
+          </a>
+        </div>
       </div>
       <div className={cn(s.copyright)}>
         <span>Copyright © {new Date().getFullYear()} Sundate inc .</span>

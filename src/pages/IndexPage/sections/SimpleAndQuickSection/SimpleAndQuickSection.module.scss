@@ -1,53 +1,107 @@
 .SimpleAndQuickSection {
   position: relative;
-  //background: linear-gradient(180deg, #A1F9FD 0%, #01CADC 100%);
-  //.hand{
-  //  position: absolute;
-  //  width: 50%;
-  //  right: 0;
-  //  height: 100%;
-  //  bottom: 0;
-  //  & > span{
-  //
-  //  }
-  //}
-  h2{
+  background: linear-gradient(180deg, #A1F9FD 0%, #01CADC 100%);
+  padding-top: 40px;
+  overflow: hidden;
+  display: flex;
+  @include before-sm {
+    justify-content: left !important;
+  }
+
+  h2 {
     margin-bottom: 15px;
   }
 
-  ol{
+  ol {
     margin-bottom: 15px;
-    li{
+
+    li {
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.05em;
       @include f9();
-      @include for-lg{
+      @include for-lg {
         @include f5();
       }
-      @include for-xxxl{
+      @include for-xxxl {
         @include f3();
       }
     }
-    @include for-lg{
+
+    @include for-lg {
       margin-bottom: 85px;
     }
   }
-  .inner{
-    .LinkButton{
-      margin-top: 3vh;
+
+  .inner {
+    margin: auto;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include for-sm {
+      grid-template-columns: 4fr 3fr;
     }
-    & > span{
-      display: block;
-      @include for-xl{
-        margin-bottom: 25px;
+
+    .texts {
+      z-index: 10;
+
+      .LinkButton {
+        margin-top: 3vh;
+      }
+
+      & > span {
+        display: block;
+        @include for-xl {
+          margin-bottom: 25px;
+        }
+      }
+
+      & > div, & > span {
+        font-weight: 700;
+        @include f9();
+        @include for-lg {
+          @include f5();
+        }
       }
     }
-    & > div, & > span{
-      font-weight: 700;
-      @include f9();
-      @include for-lg{
-        @include f5();
+
+    .preview {
+      .bganim{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .phones {
+
+        display: flex;
+        max-width: 605px;
+        position: absolute;
+        bottom: -60%;
+        @include before-xs {
+          display: none;
+        }
+        @include for-sm {
+          position: static;
+        }
+        @include for-md {
+        }
+
+        .img {
+          &:nth-child(1) {
+            z-index: 3;
+          }
+
+          &:nth-child(2) {
+            z-index: 2;
+          }
+
+          &:nth-child(3) {
+            z-index: 1;
+          }
+        }
       }
     }
   }

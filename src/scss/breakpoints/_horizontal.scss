@@ -52,6 +52,12 @@
 
 /*=============================== DESCTOP TO FIRST =================================*/
 // ONLY BEFORE SM
+@mixin before-xs {
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+// ONLY BEFORE SM
 @mixin before-sm {
   @media (max-width: #{$screen-sm}) {
     @content;

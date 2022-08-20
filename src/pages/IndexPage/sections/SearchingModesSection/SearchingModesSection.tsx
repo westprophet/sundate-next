@@ -7,7 +7,7 @@ import s from './SearchingModesSection.module.scss';
 import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
 import FeatureComponent from './components/FeatureComponent';
-import BG from './image/section-second.webp';
+import BG from './image/2-min.webp';
 import Cubs from './image/cybs.svg';
 import globus from './image/globus.svg';
 import loops from './image/loops.svg';

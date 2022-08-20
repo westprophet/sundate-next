@@ -28,14 +28,7 @@ export const SectionWrapper = forwardRef(
       <motion.section ref={ref} className={cn(s.SectionWrapper, 'section', className)}>
         {cover ? (
           <div className={cn(s.bg, 'background')}>
-            <Image
-              src={cover}
-              layout="fill"
-              objectFit="cover"
-              placeholder="blur"
-              quality={100}
-              loading="eager"
-            />
+            <Image src={cover} layout="fill" objectFit="cover" placeholder="blur" loading="eager" />
           </div>
         ) : null}
         {children}

@@ -7,7 +7,7 @@ import s from './OurAdvantages.module.scss';
 import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
 
-import bg from './images/bg4-min.webp';
+import bg from './images/bg1.webp';
 import Advantage from './components/Advantage';
 
 import ad1 from './images/scales.svg';
@@ -45,10 +45,10 @@ export default function OurAdvantages({ className }: IOurAdvantagesProps) {
         variants={variants}
         whileInView="show"
         initial="hidden"
-        // viewport={{
-        //   once: true,
-        //   amount: 1,
-        // }}
+        viewport={{
+          once: true,
+          amount: 1,
+        }}
       >
         <motion.h2 variants={showVertVariants} custom="top">
           Our advantages

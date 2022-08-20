@@ -17,10 +17,16 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    nav.menu {
+    .menu {
       display: grid;
       gap: 10px;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content auto;
+      :local(.head){
+        @include before-lg{
+          grid-column: 1/3;
+        }
+      }
       @include for-sm {
         grid-template-columns: 1fr;
         margin-bottom: 30px;
@@ -79,6 +85,9 @@
       }
     }
   }
+  .emailLink{
+    @include f6();
+  }
   .copyright {
     width: 100%;
     background-color: #454545;
@@ -98,15 +107,19 @@
   }
   .socials{
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
     z-index: 99;
     position: absolute;
     bottom: 30px + 10px;
-    justify-content: right;
-    @include for-xs{
-      justify-content: center;
+
+    .items{
+      justify-content: right;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include for-xs{
+        justify-content: center;
+      }
+
     }
     @include for-lg{
       bottom: 120px;

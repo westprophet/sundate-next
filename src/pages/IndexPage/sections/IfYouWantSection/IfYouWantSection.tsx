@@ -8,7 +8,7 @@ import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
 import { MSocial as Social } from './components/Social';
 
-import BG from './images/bg6-min.webp';
+import BG from './images/bg-min.webp';
 import Twitter from 'assets/Twitter.svg';
 import Facebook from 'assets/Facebook.svg';
 import Inst from 'assets/Inst.svg';

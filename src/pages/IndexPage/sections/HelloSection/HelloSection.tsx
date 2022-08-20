@@ -8,11 +8,12 @@ import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
 import Slide from './components/SlideTemplate';
 import Hello from './images/hello-2-min.webp';
-import img2 from './images/2-min.webp';
-import img3 from './images/3-min.webp';
-import img4 from './images/4-min.webp';
+
+import img2 from './images/2.webp';
+import img3 from './images/3.webp';
+import img4 from './images/4.webp';
 import img5 from './images/5-min.webp';
-import img6 from './images/6-min.webp';
+import img6 from './images/6.webp';
 import { motion } from 'framer-motion';
 
 const titleVariants = {

@@ -1,21 +1,24 @@
 .News {
   width: 100%;
   color: currentColor;
+  display: grid;
   .cover {
     position: relative;
-    height: 150px;
-    width: 100%;
+    width: 50%;
+    justify-self: center;
     margin-bottom: 30px;
     @include for-xxl{
-      height: 250px;
+      width: 100%;
     }
   }
-
+  @include for-md {
+    max-width: 340px;
+  }
   @include for-lg {
     max-width: 540px;
   }
   @include for-xxl {
-    max-width: 470px;
+    max-width: 450px;
   }
 
   h3 {
