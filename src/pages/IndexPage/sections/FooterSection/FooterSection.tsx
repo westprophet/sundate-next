@@ -6,7 +6,7 @@ import React from 'react';
 import s from './FooterSection.module.scss';
 import cn from 'classnames';
 import { Section } from 'src/layout/FullPageLayout';
-import BG from './images/bg.webp';
+import BG from './images/bg2.webp';
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { TextField } from '@mui/material';

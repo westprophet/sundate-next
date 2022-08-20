@@ -1,5 +1,8 @@
 .FooterSection {
   position: relative;
+  :global(.background){
+    filter: brightness(50%);
+  }
   .head {
     margin-bottom: 3vh;
     @include for-md{
