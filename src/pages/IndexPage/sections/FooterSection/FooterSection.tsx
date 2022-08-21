@@ -16,6 +16,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Facebook from "assets/Facebook.svg";
 import Inst from "assets/Inst.svg";
 import Twitter from "assets/Twitter.svg";
+import AppStoreButton from "components/AppStoreButton";
+import GooglePlayButton from "components/GooglePlayButton";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
@@ -28,7 +30,7 @@ export default function FooterSection({ className }: IFooterSectionProps) {
       <Section.Inner className={cn(s.inner)}>
         <div className={cn(s.menu)}>
           <div className={cn(s.head)}>
-            <h2>Info</h2>
+            <h3>Info</h3>
           </div>
           <div className={cn(s.links)}>
 
@@ -44,22 +46,10 @@ export default function FooterSection({ className }: IFooterSectionProps) {
             </a>
           </div>
         </div>
-  {/*      <div className={cn(s.contacts)}>
-          <div className={cn(s.head)}>
-            <h2>Contact us</h2>
-          </div>
-          <a
-            className={cn(s.emailLink)}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:Sundateinc@gmail.com"
-          >
-            Sundateinc@gmail.com
-          </a>
-        </div>*/}
+
         <div className={cn(s.forInvestors)}>
           <div className={cn(s.head)}>
-            <h2>For investors</h2>
+            <h3>For investors</h3>
           </div>
           <div className={cn(s.links)}>
             <a target="_blank" href="/SunDate Inc. Pitch-deck War addition 2022.pdf">
@@ -70,6 +60,32 @@ export default function FooterSection({ className }: IFooterSectionProps) {
             </a>
           </div>
         </div>
+        <div className={cn(s.contacts)}>
+          <div className={cn(s.head)}>
+            <h3>Contact us</h3>
+          </div>
+          <div className={cn(s.links)}>
+            <a
+              className={cn(s.emailLink)}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:Sundateinc@gmail.com"
+            >
+              sundateinc@gmail.com
+            </a>
+
+
+          </div>
+        </div>
+        {/*<div className={cn(s.contacts)}>*/}
+        {/*  <div className={cn(s.head)}>*/}
+        {/*    <h3>Download App</h3>*/}
+        {/*  </div>*/}
+        {/*  <div className={cn(s.buttons)}>*/}
+        {/*    <AppStoreButton />*/}
+        {/*    <GooglePlayButton />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         {/*        <Formik
           initialValues={{ email: '', message: '' }}
           validationSchema={SignupSchema}
@@ -118,14 +134,7 @@ export default function FooterSection({ className }: IFooterSectionProps) {
         </Formik>*/}
       </Section.Inner>
       <div className={cn(s.socials, "with-screen-padding")}>
-        <a
-          className={cn(s.emailLink)}
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto:Sundateinc@gmail.com"
-        >
-          Sundateinc@gmail.com
-        </a>
+
         <div className={cn(s.items)}>
           <a
             target="_blank"

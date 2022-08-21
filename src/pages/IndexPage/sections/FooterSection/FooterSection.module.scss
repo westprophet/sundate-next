@@ -1,6 +1,11 @@
 .FooterSection {
   position: relative;
-
+  justify-items: center;
+  align-items: center;
+  @include before-md{
+    justify-content: left!important;
+    padding-top: 50px;
+  }
   :global(.background) {
     filter: brightness(50%);
   }
@@ -36,8 +41,8 @@
       }
     }
 
-    @include for-lg {
-      grid-template-columns: 2fr  3fr;
+    @include for-md {
+      grid-template-columns: 3fr 4fr 2fr ;
     }
 
     .menu {
@@ -45,6 +50,9 @@
     }
 
     .forInvestors {
+
+    }
+    .contacts{
 
     }
 
@@ -86,7 +94,11 @@
   .emailLink {
     @include f6();
   }
-
+  .buttons{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
   .copyright {
     width: 100%;
     background-color: #454545;
@@ -113,7 +125,9 @@
     display: grid;
     justify-content: center;
     gap: 30px;
+
     :local(.emailLink){
+      text-align: center;
     }
     .items {
       justify-content: right;
