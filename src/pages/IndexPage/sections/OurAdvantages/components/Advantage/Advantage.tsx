@@ -23,8 +23,8 @@ export default function Advantage({ className, title, children, Icon }: IAdvanta
   return (
     <motion.div variants={variants} className={cn(s.Advantage, className)}>
       <h3>{title}</h3>
+      <Icon className={cn(s.icon)} />
       <div className={cn(s.body)}>
-        <Icon className={cn(s.icon)} />
         <p>{children}</p>
       </div>
     </motion.div>

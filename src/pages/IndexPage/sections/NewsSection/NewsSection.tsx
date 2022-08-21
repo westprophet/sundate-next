@@ -50,7 +50,7 @@ export default function NewsSection({ className }: INewsSectionProps) {
                 amount: 0.8,
               }}
             >
-              <h2>news and events</h2>
+              <h2>news</h2>
               <div className={cn(s.news)}>
                 {nc.map((n: INews, i: number) => {
                   return (

@@ -27,12 +27,9 @@
   }
   .title{
     @include f5;
-    @include for-xl{
-
-    }
   }
   p.description {
-    @include f9() {
+    @include f8() {
       font-weight: 400;
     }
     @include for-xxl {

@@ -2,10 +2,9 @@
   //max-width: 526px;
   letter-spacing: 0.06em;
   line-height: 140%;
-  font-weight: 200;
   padding-right: 30px;
+  font-weight: 400;
   @include for-md {
-    font-weight: 400;
     line-height: 180%;
   }
   @include for-lg {

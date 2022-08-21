@@ -1,0 +1,22 @@
+.GetApplicationButton {
+  width: 120px;
+  height: 40px;
+  background-color: red;
+  border: 1px solid transparent;
+  //transition: .25s;
+  @include for-xxl{
+    width: 180px;
+    height: 60px;
+  }
+  &.appstore{
+    background: url('../../../assets/buttons/app-store.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+  &.google{
+    background: url('../../../assets/buttons/google-play-market.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+  &:hover{
+    border: 1px solid grey;
+  }
+}

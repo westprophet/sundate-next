@@ -1,13 +1,16 @@
 .FooterSection {
   position: relative;
-  :global(.background){
+
+  :global(.background) {
     filter: brightness(50%);
   }
+
   .head {
     margin-bottom: 3vh;
-    @include for-md{
+    @include for-md {
       margin-bottom: 10vh;
     }
+
     h2 {
       margin: 0;
     }
@@ -15,31 +18,10 @@
 
   .inner {
     display: grid;
-    gap: 30px;
-    @include for-lg {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .menu {
+    gap: 5vh;
+    .links {
       display: grid;
-      gap: 10px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: min-content auto;
-      :local(.head){
-        @include before-lg{
-          grid-column: 1/3;
-        }
-      }
-      @include for-sm {
-        grid-template-columns: 1fr;
-        margin-bottom: 30px;
-        gap: 30px;
-      }
-      @include for-lg {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-
+      gap: 3vh;
       a {
         span {
           color: rgba(#fff, 0.7);
@@ -54,33 +36,45 @@
       }
     }
 
-    form {
-      display: grid;
-      gap: 15px;
-      max-width: 425px;
-      padding: 0 20px 0 0;
-      color: #fff;
-      max-height: 355px;
-      @include for-lg {
-        justify-self: center;
-        width: 100%;
-        grid-column: 2/3;
-        grid-row: 1/3;
-      }
-
-      button {
-        max-width: 120px;
-        height: 33px;
-        @include for-lg {
-          height: 55px;
-          max-width: 200px;
-        }
-      }
-
-      textarea {
-        resize: none;
-      }
+    @include for-lg {
+      grid-template-columns: 2fr  3fr;
     }
+
+    .menu {
+
+    }
+
+    .forInvestors {
+
+    }
+
+    /*    form {
+          display: grid;
+          gap: 15px;
+          max-width: 425px;
+          padding: 0 20px 0 0;
+          color: #fff;
+          max-height: 355px;
+          @include for-lg {
+            justify-self: center;
+            width: 100%;
+            grid-column: 2/3;
+            grid-row: 1/3;
+          }
+
+          button {
+            max-width: 120px;
+            height: 33px;
+            @include for-lg {
+              height: 55px;
+              max-width: 200px;
+            }
+          }
+
+          textarea {
+            resize: none;
+          }
+        }*/
 
     :global(.background) {
       img {
@@ -88,9 +82,11 @@
       }
     }
   }
-  .emailLink{
+
+  .emailLink {
     @include f6();
   }
+
   .copyright {
     width: 100%;
     background-color: #454545;
@@ -108,31 +104,39 @@
       height: 66px;
     }
   }
-  .socials{
+
+  .socials {
     width: 100%;
     z-index: 99;
     position: absolute;
     bottom: 30px + 10px;
-
-    .items{
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    :local(.emailLink){
+    }
+    .items {
       justify-content: right;
       display: flex;
       align-items: center;
       gap: 20px;
-      @include for-xs{
+      @include for-xs {
         justify-content: center;
       }
 
     }
-    @include for-lg{
+
+    @include for-lg {
       bottom: 120px;
     }
-    svg{
+
+    svg {
       cursor: pointer;
       width: auto;
       height: 24px;
       transition: .3s;
-      &:hover{
+
+      &:hover {
         transform: scale(1.3);
         transition: .3s;
       }
