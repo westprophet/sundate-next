@@ -1,5 +1,5 @@
-import INews from '../../../../../interfaces/INews';
-import lioha from '../images/lioha.webp';
+import INews from '../interfaces/INews';
+import lioha from '../pages/IndexPage/sections/NewsSection/images/lioha.webp';
 
 const TEST_NEWS: INews[] = [
   {

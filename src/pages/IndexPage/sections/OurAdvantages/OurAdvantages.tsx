@@ -56,20 +56,16 @@ export default function OurAdvantages({ className }: IOurAdvantagesProps) {
         {/*<CustomButton />*/}
         <div className={cn(s.advatages)}>
           <Advantage Icon={ad1} title="equal chance">
-            Simple way for people with any disabilities or major illness to make a Goal and to make
-            a giant leap from loneliness. "That's one small step for That's one small
+            The simple way for people with anу disabilities or major illness to make a Goal and to make a giant leap from loneliness. "That's one small step for man, one giant leap for mankind”
           </Advantage>
           <Advantage Icon={ad2} title="Only real video content and people">
-            Only real video content to make matchmaking more interesting and to avoid fakes. Higher
-            ratings for...
+            Only real video content to make matchmaking more interesting and to avoid fakes. Higher ratings with more videos and for more matches
           </Advantage>
           <Advantage Icon={ad3} title="Original interface for more Usability">
-            Dynamic menu and all buttons in big finger zone. Auto play for additional comfort. With
-            auto play, your...
+            Dynamic menu and all buttons in big finger zone. Auto play for additional comfort. Dating cards and much further
           </Advantage>
           <Advantage Icon={ad4} title="Dating without borders ">
-            All searching modes opened forever and for everyone. Additional services and many other
-            unexpected...
+            All Five searching modes are opened forever and for everyone. Additional services and many other unexpected features
           </Advantage>
         </div>
       </Section.Inner>

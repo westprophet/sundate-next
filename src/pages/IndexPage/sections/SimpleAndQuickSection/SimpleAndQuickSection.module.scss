@@ -85,11 +85,11 @@
         display: flex;
         max-width: 605px;
         position: absolute;
-        bottom: -60%;
         @include before-xs {
           display: none;
         }
         @include for-sm {
+          bottom: -60%;
           position: static;
         }
         @include for-md {

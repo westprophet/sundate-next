@@ -1,15 +1,18 @@
 .Advantage {
   display: grid;
   background-color: rgba(#252525, 0.8);
-  padding: 15px;
+  padding: 7px;
   transition: .25s;
   cursor: pointer;
   overflow: hidden;
-  grid-template-rows: 35px auto;
+  grid-template-rows: 25px auto;
   grid-template-columns: min-content 5fr;
   width: 100%;
   height: min-content;
   gap: 10px;
+  @include for-sm{
+    padding: 15px;
+  }
   @include for-md {
     grid-template-rows: 35px auto;
     width: 265px;
@@ -85,8 +88,5 @@
     background: $primary-color-transparent;
     transform: scale(1.1);
     z-index: 10;
-    //@include for-xxl {
-    //  transform: scale(1.1);
-    //}
   }
 }

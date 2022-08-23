@@ -12,7 +12,7 @@ import Hello from './images/hello-2-min.webp';
 import img2 from './images/2.webp';
 import img3 from './images/3.webp';
 import img4 from './images/4.webp';
-import img5 from './images/5-min.webp';
+import img5 from './images/young-asian-couple-watching-sunset-near-beach-sweet-couple-happy-relax-enjoy-love-and-romantic-momen.webp';
 import img6 from './images/6.webp';
 import { motion } from 'framer-motion';
 
@@ -85,12 +85,14 @@ export default function HelloSection({ className }: IHelloSectionProps) {
         </Slide.Title>
         <Slide.Description variants={variantsDescription}>
           <motion.div variants={showVertVariants}>
-            Our mission is to make people Un-lonely in their Lives, Real lives in real World. The
-            fastest way from online to offline meetings. Come to the Real side
+            Our mission is to make people really unlonely
+            We provide the fastest and excitement way from
+            online to offline meetings
+            So come with us to the real side, SunDate side
           </motion.div>
-          <motion.div variants={showVertVariants}>
-            <Slide.Button title="details" />
-          </motion.div>
+          {/*<motion.div variants={showVertVariants}>*/}
+          {/*  <Slide.Button title="Next" />*/}
+          {/*</motion.div>*/}
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img3}>
@@ -107,9 +109,9 @@ export default function HelloSection({ className }: IHelloSectionProps) {
             Only real Video without any Filters or fake Masks. Only real People around the Whole
             world and further to the stars
           </motion.div>
-          <motion.div variants={showVertVariants}>
-            <Slide.Button title="details" />
-          </motion.div>
+          {/*<motion.div variants={showVertVariants}>*/}
+          {/*  <Slide.Button title="details" />*/}
+          {/*</motion.div>*/}
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img4}>
@@ -123,8 +125,11 @@ export default function HelloSection({ className }: IHelloSectionProps) {
         </Slide.Title>
         <Slide.Description variants={variantsDescription}>
           <motion.div variants={showVertVariants}>
-            Only real Video without any Filters or fake Masks. Only real People around the Whole
-            world and further to the stars
+            Only real Video without any filters or fake
+            masks
+            <br/>
+            Only real People around the whole World
+            and further to the stars
           </motion.div>
 
           <motion.div variants={showVertVariants}>
@@ -138,32 +143,33 @@ export default function HelloSection({ className }: IHelloSectionProps) {
             Time priceless
           </motion.div>
           <motion.div variants={titleChildVariants} custom={'left'}>
-            Life wisest
+            Life coolest
           </motion.div>
         </Slide.Title>
         <Slide.Description variants={variantsDescription}>
           <motion.div variants={showVertVariants}>
-            Limited time to organize your date. 48 hours and you go for date, otherwise, you go for
-            date but for another one, but definitely, you go for date. Respect yourself, respect
-            your Time, respect each other and People will respect us too. Time is Priceless thing in
-            this World.
+            Limited time and just a few interesting steps to
+            organize a date
+            So, just a few hours and you go for a date, or you go for
+            another date, but definitely, you go for a date
+            Your time is a priceless thing in this World, so do not waste it
           </motion.div>
-          <motion.div variants={showVertVariants}>
-            <Slide.Button title="details" />
-          </motion.div>
+          {/*<motion.div variants={showVertVariants}>*/}
+          {/*  <Slide.Button title="details" />*/}
+          {/*</motion.div>*/}
         </Slide.Description>
       </Slide.Wrapper>
       <Slide.Wrapper cover={img6}>
         <Slide.Title variants={titleChildVariants} custom={'left'}>
-          A few words By Alex (CEO of SD)
+          A few words
+          By SUNDATE TEAM
         </Slide.Title>
         <Slide.Description variants={variantsDescription}>
           <motion.div variants={showVertVariants}>
-            “Some say - metauniverse, but I say - Your universe, Our universe, Real universe.
-            Anything virtual cannot replace your life, cannot replace people around you, cannot
-            replace real warm and support of beloved person, cannot replace You. We can hide behind
-            the masks and smiles, but we cannot hide from ourselves and from our loneliness. The
-            best thing we have, it is this one life and it’s ours.”
+            Some say, metauniverse, but we say, it is Your universe and it is real
+            Anything virtual cannot replace people around you, cannot replace real warm and support of the beloved person, cannot replace real You
+            We can hide from life behind masks, but we cannot hide from our loneliness
+            The best thing You have is this one life and it’s all yours, so be real, be yourself and go for a date, SunDate
           </motion.div>
         </Slide.Description>
       </Slide.Wrapper>

@@ -1,0 +1,45 @@
+@import "../../data";
+
+.Header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $header-height-xs;
+  z-index: 5;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  &.white{
+    color: white;
+    border-bottom: 1px solid #FFFFFF70;
+    transition: color #{$page-transition}ms;
+  }
+  &.dark{
+    color: #656565;
+    border-bottom: 1px solid #44444470;
+    transition: color #{$page-transition}ms;
+  }
+  @include for-md{
+    height: $header-height-md;
+  }
+  @include for-lg{
+    height: $header-height-lg;
+  }
+  .menuContainer{
+    color: inherit;
+    .desktop{
+      @include before-lg{
+        display: none;
+      }
+    }
+    .mobile{
+      @include for-lg{
+        display: none;
+      }
+    }
+  }
+
+}

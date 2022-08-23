@@ -1,0 +1,15 @@
+@import 'src/scss/global.scss';
+@import 'data';
+
+.DefaultLayout{
+  padding-top: $header-height-xs;
+  @include for-md{
+    padding-top: $header-height-md;
+  }
+  @include for-lg{
+    padding-top: $header-height-lg;
+  }
+  .inner{
+
+  }
+}

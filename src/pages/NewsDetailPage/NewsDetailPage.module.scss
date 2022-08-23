@@ -1,0 +1,39 @@
+@import 'src/scss/global.scss';
+
+.NewsDetailPage {
+  overflow: hidden;
+  h1{
+    color: black!important;
+    @include f5();
+    text-align: center;
+    @include for-lg{
+      @include f1();
+    }
+  }
+  .coverContainer{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    @include for-lg{
+      height: 500px;
+    }
+    .fill{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      filter: blur(20px);
+      z-index: -1;
+    }
+    .cover{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      //z-index: 1;
+    }
+  }
+  p{
+    margin-top: 30px;
+    color: black;
+  }
+}

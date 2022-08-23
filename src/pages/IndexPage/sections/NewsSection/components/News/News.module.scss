@@ -2,6 +2,10 @@
   width: 100%;
   color: currentColor;
   display: grid;
+  .readMore{
+    max-width: 200px;
+    justify-self: center;
+  }
   .cover {
     position: relative;
     width: 50%;

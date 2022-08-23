@@ -8,7 +8,7 @@ import cn from 'classnames';
 import { Section } from '../../../../layout/FullPageLayout';
 import News from './components/News';
 import CoverForNews from './images/news-min.jpg';
-import TEST_NEWS from './constants/TEST_NEWS';
+import TEST_NEWS from '../../../../constants/TEST_NEWS';
 import INews from '../../../../interfaces/INews';
 import sliceIntoChunks from '../../../../utils/sliceIntoChunks';
 import useBreakpoint from '../../../../hooks/useBreakpoint';
@@ -65,7 +65,7 @@ export default function NewsSection({ className }: INewsSectionProps) {
                   );
                 })}
               </div>
-              <Button className={cn(s.allButton)}>All news</Button>
+              {/*<Button className={cn(s.allButton)}>All news</Button>*/}
             </Section.Inner>
           </Section.Slide>
         );
