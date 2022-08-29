@@ -11,7 +11,8 @@ export const HEADER_MENU: IMenu = [
   },
   {
     title: 'For Investors',
-    href: '/#OurAdvantages',
+    href: '/#Contacts',
+
   },
   {
     title: 'News',

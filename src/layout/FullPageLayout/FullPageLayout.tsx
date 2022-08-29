@@ -43,7 +43,7 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
         theme: { value: theme, setTheme: _setTheme },
       }}
     >
-      <main id="FullPageLayout" className={cn(s.FullPageLayout, {}, className)}>
+      <main id="FullPageLayout" className={cn(s.FullPageLayout, className)}>
         <Header />
         <ReactFullpage
           licenseKey={'YOUR_KEY_HERE'}
@@ -62,7 +62,7 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
           waterEffect
           anchors={anchors}
           render={({ state, fullpageApi }) => {
-            fapi.current = fullpageApi;
+            if(fullpageApi) fapi.current = fullpageApi;
             fstate.current = state;
             return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
           }}

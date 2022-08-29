@@ -65,7 +65,7 @@ export default function SidebarMenu({ className, toggleOpen }: ISidebarMenuProps
         <motion.a href="/#NoDateNoFate" variants={variantsItems} onClick={() => toggleOpen()}>
           About us
         </motion.a>
-        <motion.a href="/#OurAdvantages" variants={variantsItems} onClick={() => toggleOpen()}>
+        <motion.a href="/#Contacts" variants={variantsItems} onClick={() => toggleOpen()}>
           For Investors
         </motion.a>
         <motion.a href="/#SunDateFamily" variants={variantsItems} onClick={() => toggleOpen()}>
