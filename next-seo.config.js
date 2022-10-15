@@ -11,16 +11,10 @@ export default {
     locale: 'en_US',
     images: [
       {
-        url: `https://sundate.app/images/og_1010x907.png`,
-        width: 1010,
-        height: 709,
-        type: 'image/png',
-        alt: 'sundate.app',
-      },
-      {
-        url: `https://sundate.app/images/og_264x268.png`,
-        width: 264,
-        height: 268,
+        url: `http://sundate.app/images/1200x630.png`,
+        secure_url: `https://sundate.app/images/og_1200x630.png`,
+        width: 1200,
+        height: 630,
         type: 'image/png',
         alt: 'sundate.app',
       },
