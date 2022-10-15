@@ -29,7 +29,8 @@ export default {
     ],
     twitter: {
       site: '@SunDate_app',
-      cardType: 'summary',
+      image: 'https://sundate.app/images/og_1010x907.png',
+      cardType: 'summary_large_image',
     },
   },
 };
