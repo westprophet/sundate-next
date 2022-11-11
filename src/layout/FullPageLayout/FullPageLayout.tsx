@@ -2,17 +2,17 @@
  * Created by westprophet on 05.05.2022
  */
 
-import React, { createContext, useState, startTransition, useRef, useCallback } from 'react';
-import s from './FullPageLayout.module.scss';
-import cn from 'classnames';
-import ReactFullpage, { fullpageApi, Item } from '@fullpage/react-fullpage';
-import { INITIAL_VALUE } from './constants';
-import IFullPageContextValue from './types/IFullPageContextValue';
+import React, { createContext, useState, startTransition, useRef, useCallback } from "react";
+import s from "./FullPageLayout.module.scss";
+import cn from "classnames";
+import ReactFullpage, { fullpageApi, Item } from "@fullpage/react-fullpage";
+import { INITIAL_VALUE } from "./constants";
+import IFullPageContextValue from "./types/IFullPageContextValue";
 
-import variable from 'src/scss/_export.module.scss';
+import variable from "src/scss/_export.module.scss";
 
-import Header from './sections/Header';
-import { TFullPageTheme } from './types/TFullPageTheme';
+import Header from "./sections/Header";
+import { TFullPageTheme } from "./types/TFullPageTheme";
 
 export const FullPageContext = createContext<IFullPageContextValue>(INITIAL_VALUE);
 
@@ -40,17 +40,19 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
         state: fstate.current,
         current,
         api: fapi.current,
-        theme: { value: theme, setTheme: _setTheme },
+        theme: { value: theme, setTheme: _setTheme }
       }}
     >
       <main id="FullPageLayout" className={cn(s.FullPageLayout, className)}>
         <Header />
         <ReactFullpage
-          licenseKey={'YOUR_KEY_HERE'}
+          licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={Number(variable.pageTransition)}
           controlArrows={false}
           navigation
-          navigationPosition={'left'}
+          touchSensitivity={5}
+          fitToSectionDelay={Number(variable.pageTransition)}
+          navigationPosition={"left"}
           slidesNavigation
           slidesNavPosition="bottom"
           scrollOverflow={false}
@@ -58,11 +60,11 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
           onLeave={(origin: Item, destination: Item, direction: string) => {
             startTransition(() => setState({ origin, destination, direction }));
           }}
-          navigationTooltips={['01', '02', '03', '04', '05', '06', '07']}
+          navigationTooltips={["01", "02", "03", "04", "05", "06", "07"]}
           waterEffect
           anchors={anchors}
           render={({ state, fullpageApi }) => {
-            if(fullpageApi) fapi.current = fullpageApi;
+            if (fullpageApi) fapi.current = fullpageApi;
             fstate.current = state;
             return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
           }}
@@ -73,8 +75,8 @@ export default function FullPageLayout({ className, children, anchors }: IFullPa
 }
 
 FullPageLayout.defaultProps = {
-  className: '',
-  anchors: [],
+  className: "",
+  anchors: []
 };
 
 interface IFullPageLayoutProps {

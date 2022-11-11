@@ -18,9 +18,9 @@ import { motion } from 'framer-motion';
 const variants = {
   show: {
     transition: {
-      delay: 0.4,
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      delay: 0.3,
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
     },
   },
   hidden: {},
@@ -31,7 +31,7 @@ const variantsTitle = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 1,
+      delay: 0.3,
     },
   },
   hidden: {

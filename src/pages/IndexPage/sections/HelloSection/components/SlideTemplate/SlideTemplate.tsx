@@ -13,7 +13,8 @@ const variants = {
   show: {
     transition: {
       delay: 0,
-      staggerChildren: 0.3,
+        duration: 0.25,
+      staggerChildren: 0.2,
     },
   },
   hidden: {
