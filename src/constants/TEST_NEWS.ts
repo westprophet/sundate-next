@@ -1,7 +1,15 @@
 import INews from '../interfaces/INews';
-import lioha from '../pages/IndexPage/sections/NewsSection/images/lioha.webp';
+import lioha from 'assets/news/lioha.webp';
+import news2 from 'assets/news/07 January 2023.webp';
 
 const TEST_NEWS: INews[] = [
+  {
+    cover: news2,
+    title: 'Dedicated to our best friend Oleksii….',
+    description:
+      'We keep moving forward and up to the stars, slowly, but still we do it. And Eschool-ua and its Founder and CEO - Oleksii Koshevets and his team help us to grow and develop our SunDate and DoBi products. Now, Maksim as Project manager and Sergey as IOS developer help us in developments processes. Welcome to team, our soulmates and our teammates.',
+    date: '07 January 2023',
+  },
   {
     cover: lioha,
     title: 'Dedicated to our best friend Oleksii….',

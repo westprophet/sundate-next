@@ -32,8 +32,11 @@
       //z-index: 1;
     }
   }
-  p{
+  p.description{
     margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
     color: black;
   }
 }

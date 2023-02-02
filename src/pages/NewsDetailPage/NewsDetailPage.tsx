@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export default function NewsDetailPage({ className, news }: INewsDetailPageProps) {
   return (
-    <DefaultLayout className={cn(s.NewsDetailPage,'with-screen-padding', className)}>
+    <DefaultLayout className={cn(s.NewsDetailPage, 'with-screen-padding', className)}>
       <h1>{news.title}</h1>
       {news.cover ? (
         <div className={cn(s.coverContainer)}>
@@ -26,16 +26,11 @@ export default function NewsDetailPage({ className, news }: INewsDetailPageProps
             />
           </div>
           <div className={cn(s.cover)}>
-            <Image
-              src={news.cover}
-              layout="fill"
-              objectFit="contain"
-              placeholder="blur"
-            />
+            <Image src={news.cover} layout="fill" objectFit="contain" placeholder="blur" />
           </div>
         </div>
       ) : null}
-      <p>{news.description}</p>
+      <p className={cn(s.description)}>{news.description}</p>
     </DefaultLayout>
   );
 }
