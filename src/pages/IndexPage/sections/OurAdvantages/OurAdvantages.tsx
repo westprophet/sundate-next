@@ -19,8 +19,9 @@ import { motion } from 'framer-motion';
 const variants = {
   show: {
     transition: {
+      duration: 0.2,
       staggerChildren: 0.15,
-      delayChildren: 0.2,
+      delayChildren: 0.1,
     },
   },
   hidden: {},
@@ -30,6 +31,9 @@ const showVertVariants = {
   show: (custom: 'top' | 'bottom') => ({
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.2,
+    },
   }),
   hidden: (custom: 'top' | 'bottom') => ({
     y: custom === 'bottom' ? '-100%' : '100%',

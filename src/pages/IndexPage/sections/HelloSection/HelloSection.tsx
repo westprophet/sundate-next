@@ -26,9 +26,9 @@ import { useRouter } from 'next/router';
 const titleVariants = {
   show: {
     transition: {
-      delay: 0.5,
-      delayChildren: 0.2,
-      staggerChildren: 0.3,
+      delay: 0.25,
+      delayChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -37,6 +37,9 @@ const titleChildVariants = {
   show: (custom: 'left' | 'right') => ({
     x: 0,
     opacity: 1,
+    transition: {
+      duration: 0.25,
+    },
   }),
   hidden: (custom: 'left' | 'right') => ({
     x: custom === 'left' ? '-100%' : '100%',
@@ -58,7 +61,7 @@ const showVertVariants = {
 const variantsDescription = {
   show: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 };

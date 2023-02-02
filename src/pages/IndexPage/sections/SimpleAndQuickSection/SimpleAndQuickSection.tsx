@@ -2,40 +2,41 @@
  * Created by westprophet on 07.05.2022
  */
 
-import React from "react";
-import s from "./SimpleAndQuickSection.module.scss";
-import cn from "classnames";
-import { Section } from "../../../../layout/FullPageLayout";
+import React from 'react';
+import s from './SimpleAndQuickSection.module.scss';
+import cn from 'classnames';
+import { Section } from '../../../../layout/FullPageLayout';
 
-import phone1 from "./images/phone1.webp";
-import phone2 from "./images/phone2.webp";
-import phone3 from "./images/phone3.webp";
+import phone1 from './images/phone1.webp';
+import phone2 from './images/phone2.webp';
+import phone3 from './images/phone3.webp';
 
-import Image from "next/image";
-import { Button } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { motion } from "framer-motion";
-import BubbleColor from "components/BubbleColor";
+import Image from 'next/image';
+import { Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { motion } from 'framer-motion';
+import BubbleColor from 'components/BubbleColor';
 
 const variants = {
   show: {
     transition: {
+      delay: 0.3,
       staggerChildren: 0.15,
-      delayChildren: 0.2
-    }
+      delayChildren: 0.1,
+    },
   },
-  hidden: {}
+  hidden: {},
 };
 
 const showVertVariants = {
-  show: (custom: "top" | "bottom") => ({
+  show: (custom: 'top' | 'bottom') => ({
     y: 0,
-    opacity: 1
+    opacity: 1,
   }),
-  hidden: (custom: "top" | "bottom") => ({
-    y: custom === "bottom" ? "-10%" : "10%",
-    opacity: 0
-  })
+  hidden: (custom: 'top' | 'bottom') => ({
+    y: custom === 'bottom' ? '-10%' : '10%',
+    opacity: 0,
+  }),
 };
 
 export default function SimpleAndQuickSection({ className }: ISimpleAndQuickSectionProps) {
@@ -49,7 +50,7 @@ export default function SimpleAndQuickSection({ className }: ISimpleAndQuickSect
           initial="hidden"
           viewport={{
             once: true,
-            amount: 1
+            amount: 1,
           }}
         >
           <div className={cn(s.texts)}>
@@ -118,7 +119,7 @@ export default function SimpleAndQuickSection({ className }: ISimpleAndQuickSect
 }
 
 SimpleAndQuickSection.defaultProps = {
-  className: ""
+  className: '',
 };
 
 interface ISimpleAndQuickSectionProps {
