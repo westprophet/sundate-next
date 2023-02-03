@@ -52,7 +52,7 @@ export default function FooterSection({ className }: IFooterSectionProps) {
             <h3>For investors</h3>
           </div>
           <div className={cn(s.links)}>
-            <a target="_blank" href="/SunDate Inc. Pitch-deck War addition 2022.pdf">
+            <a target="_blank" href="/SunDate pitch-deck 2023.pdf">
               <span>SunDate Pitch-Deck</span>
             </a>
             <a target="_blank" href="/SunDate Inc. Forecast Financial Statements 2023-2032.pdf">
@@ -77,61 +77,6 @@ export default function FooterSection({ className }: IFooterSectionProps) {
 
           </div>
         </div>
-        {/*<div className={cn(s.contacts)}>*/}
-        {/*  <div className={cn(s.head)}>*/}
-        {/*    <h3>Download App</h3>*/}
-        {/*  </div>*/}
-        {/*  <div className={cn(s.buttons)}>*/}
-        {/*    <AppStoreButton />*/}
-        {/*    <GooglePlayButton />*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-        {/*        <Formik
-          initialValues={{ email: '', message: '' }}
-          validationSchema={SignupSchema}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
-        >
-          {({ errors, touched, values, handleChange, isSubmitting }) => (
-            <Form>
-              <TextField
-                fullWidth
-                type="email"
-                name="email"
-                value={values.email}
-                placeholder="Email"
-                onChange={handleChange}
-                error={touched.email && Boolean(errors.email)}
-                helperText={touched.email ? errors.email : '  '}
-              />
-              <TextField
-                fullWidth
-                multiline
-                type="text"
-                name="message"
-                rows={4}
-                value={values.message}
-                placeholder="Ask questions"
-                onChange={handleChange}
-                error={touched.message && Boolean(errors.message)}
-                helperText={touched.message ? errors.message : '  '}
-              />
-              <LoadingButton
-                type="submit"
-                loadingPosition="end"
-                endIcon={<ArrowForwardIcon />}
-                loading={isSubmitting}
-                variant="contained"
-              >
-                Send
-              </LoadingButton>
-            </Form>
-          )}
-        </Formik>*/}
       </Section.Inner>
       <div className={cn(s.socials, "with-screen-padding")}>
 
