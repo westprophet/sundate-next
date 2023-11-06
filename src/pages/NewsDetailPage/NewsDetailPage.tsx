@@ -23,10 +23,11 @@ export default function NewsDetailPage({ className, news }: INewsDetailPageProps
               placeholder="blur"
               width="100%"
               height="100%"
+              unoptimized
             />
           </div>
           <div className={cn(s.cover)}>
-            <Image src={news.cover} layout="fill" objectFit="contain" placeholder="blur" />
+            <Image src={news.cover} layout="fill" objectFit="contain" placeholder="blur" unoptimized/>
           </div>
         </div>
       ) : null}

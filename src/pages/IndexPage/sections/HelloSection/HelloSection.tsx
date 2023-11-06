@@ -67,8 +67,8 @@ const variantsDescription = {
 };
 
 export default function HelloSection({ className }: IHelloSectionProps) {
-  const FullPageManager = useContext(FullPageContext);
-  const r = useRouter();
+  // const FullPageManager = useContext(FullPageContext);
+  // const r = useRouter();
   return (
     <Section.MWrapper className={cn(s.HelloSection, className)} anchor="NoDateNoFate">
       <Slide.Wrapper cover={Hello} isFirstSlide>

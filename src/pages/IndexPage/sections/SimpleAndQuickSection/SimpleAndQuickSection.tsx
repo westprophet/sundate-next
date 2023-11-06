@@ -102,13 +102,13 @@ export default function SimpleAndQuickSection({ className }: ISimpleAndQuickSect
             </svg>
             <div className={cn(s.phones)}>
               <motion.div variants={showVertVariants} className={cn(s.img)}>
-                <Image alt="1" src={phone1} layout="fixed" />
+                <Image alt="1" src={phone1} layout="fixed" unoptimized/>
               </motion.div>
               <motion.div variants={showVertVariants} className={cn(s.img)}>
-                <Image alt="1" src={phone2} layout="fixed" />
+                <Image alt="1" src={phone2} layout="fixed" unoptimized/>
               </motion.div>
               <motion.div variants={showVertVariants} className={cn(s.img)}>
-                <Image alt="1" src={phone3} layout="fixed" />
+                <Image alt="1" src={phone3} layout="fixed" unoptimized/>
               </motion.div>
             </div>
           </motion.div>

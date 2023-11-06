@@ -45,6 +45,7 @@ export const SlideTemplate = ({
     >
       <div className={cn(s.bg)}>
         <Image
+          unoptimized
           src={cover}
           layout="fill"
           objectFit="cover"
@@ -52,7 +53,8 @@ export const SlideTemplate = ({
           height="100%"
           width="100%"
           quality="100"
-          loading={isFirstSlide ? 'eager' : 'lazy'}
+          // loading={isFirstSlide ? 'eager' : 'lazy'}
+          loading="eager"
         />
       </div>
       <Panel />

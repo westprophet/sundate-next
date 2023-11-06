@@ -29,6 +29,7 @@ export default function News({ className, title, children, cover, date }: INewsP
     <motion.div variants={variants} className={cn(s.News, className)}>
       <div className={cn(s.cover)}>
         <Image
+          unoptimized
           src={cover}
           layout={"responsive"}
           objectFit="cover"
